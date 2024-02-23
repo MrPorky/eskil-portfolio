@@ -49,24 +49,29 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Eskil Ganslandt</title>
+	<meta name="description" content="Eskil Ganslandt portfolio" />
+</svelte:head>
+
 <div class="app" onmousemove={onHover} role="presentation">
-	<header>
+	<!-- <header>
 		<div>
 			<a href="/">Home</a>
 			<a href="/cases">Cases</a>
 		</div>
 		<nav>
 			<form method="POST" action="/?/toggleTheme" use:enhance={noRouting}>
-				<button class="icon" style="--size: 1.5rem;">
+				<button aria-label="Toggle Theme" class="icon" style="--size: 1.5rem;">
 					{@html isDark ? moon : sun}
 				</button>
 			</form>
 		</nav>
-	</header>
+	</header> -->
 	<main class="content-grid">
 		<slot />
 	</main>
-	<footer></footer>
+	<!-- <footer></footer> -->
 </div>
 
 <style>
@@ -115,9 +120,5 @@
 
 	header a:hover {
 		color: var(--primary-hover);
-	}
-
-	main {
-		padding: 2rem 0;
 	}
 </style>

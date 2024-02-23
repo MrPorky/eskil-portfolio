@@ -3,58 +3,59 @@
 	import linkedin from '@fortawesome/fontawesome-free/svgs/brands/linkedin.svg?raw';
 	import Cases from '$lib/components/Cases.svelte';
 	import ScrollButton from '$lib/components/ScrollButton.svelte';
+	import Technologies from '$lib/components/Technologies.svelte';
 </script>
 
-<svelte:head>
-	<title></title>
-</svelte:head>
+<!-- <picture>
+		<source srcset="/profilbild.png" />
+	</picture> -->
+<div class="page full-width">
+	<ScrollButton>
+		<img loading="lazy" src="/profilbild.jpg" alt="Eskil Ganslandt" />
 
-<section class="me">
-	<img draggable="false" src="/profilbild.jpg" alt="Eskil Ganslandt" />
-
-	<div class="column">
-		<h1>Eskil Ganslandt</h1>
-		<p>
-			I'm an enthusiastic problem solver that has dedicated almost my entire life to programming.
-			I'm always up for a challenge where I can learn something new
-		</p>
-		<div class="links row">
-			<a
-				class="icon"
-				style="--size: 1.5rem;"
-				href="https://github.com/MrPorky"
-				target="_blank"
-				rel="noreferrer"
-			>
-				{@html github}
-			</a>
-			<a
-				class="icon"
-				style="--size: 1.5rem;"
-				href="https://www.linkedin.com/in/eskil-ganslandt-b5b3a6115/"
-				target="_blank"
-				rel="noreferrer"
-			>
-				{@html linkedin}
-			</a>
+		<div class="column">
+			<h1>Eskil Ganslandt</h1>
+			<p>
+				I'm an enthusiastic problem solver that has dedicated almost my entire life to programming.
+			</p>
+			<p>I'm always up for a challenge where I can learn something new</p>
+			<div class="links row">
+				<a
+					class="icon"
+					style="--size: 1.5rem;"
+					href="https://github.com/MrPorky"
+					target="_blank"
+					rel="noreferrer"
+					aria-label="Visit Github"
+				>
+					{@html github}
+				</a>
+				<a
+					class="icon"
+					style="--size: 1.5rem;"
+					href="https://www.linkedin.com/in/eskil-ganslandt-b5b3a6115/"
+					target="_blank"
+					rel="noreferrer"
+					aria-label="Visit Linkedin"
+				>
+					{@html linkedin}
+				</a>
+			</div>
 		</div>
-	</div>
-	<ScrollButton />
-</section>
+	</ScrollButton>
 
-<section id="cases">
-	<h2 class="animate-in-and-out">Cases</h2>
-	<Cases />
-</section>
+	<section id="cases">
+		<h2 class="animate-in-and-out">Cases</h2>
+		<Cases />
+	</section>
+</div>
 
 <style>
-	.me {
-		display: flex;
-		align-items: center;
-		gap: 4rem;
+	.page {
+		grid-template-rows: 100vh 1fr;
 	}
 
-	.me img {
+	img {
 		max-height: 40%;
 		max-width: 250px;
 		object-fit: contain;
@@ -67,12 +68,5 @@
 
 	.links a {
 		color: var(--background-text);
-	}
-
-	@media screen and (max-width: 600px) {
-		.me {
-			flex-direction: column;
-			gap: 1rem;
-		}
 	}
 </style>

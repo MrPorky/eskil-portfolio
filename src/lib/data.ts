@@ -1,4 +1,4 @@
-const technologies = [
+export const technologies = [
 	'Javascript',
 	'Typescript',
 	'React',

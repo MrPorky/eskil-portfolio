@@ -124,6 +124,14 @@ body {
 	font-style: normal;
 	font-variation-settings: 'slnt' 0;
 	margin: 0;
+
+	scrollbar-color: var(--primary) var(--background);
+	scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
 }
 
 .icon {
@@ -212,19 +220,9 @@ button.outline:hover {
 }
 
 section {
+	position: relative;
 	min-height: 100vh;
 	min-height: 100lvh;
-}
-
-@keyframes background-scroll {
-	from {
-		background-color: var(--background);
-		color: var(--background-text);
-	}
-	to {
-		background-color: var(--surface);
-		color: var(--surface-text);
-	}
 }
 
 @keyframes animate-in-and-out {
@@ -248,12 +246,6 @@ section {
 	.animate-in-and-out {
 		animation: linear animate-in-and-out;
 		animation-timeline: view();
-	}
-
-	html {
-		animation: linear background-scroll;
-		animation-timeline: view();
-		animation-timeline: scroll(root block);
 	}
 }
 
