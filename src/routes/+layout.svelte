@@ -31,22 +31,6 @@
 			}).then(() => window.location.reload());
 		}
 	}
-
-	const onHover: MouseEventHandler<HTMLDivElement> = (ev) => {
-		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-		const target = ev.currentTarget;
-
-		if (!(target instanceof HTMLDivElement)) return;
-
-		const rect = target.getBoundingClientRect();
-
-		const x = ev.clientX - rect.left;
-		const y = ev.clientY - rect.top;
-
-		target.style.setProperty('--drop-x', `${x}px`);
-		target.style.setProperty('--drop-y', `${y}px`);
-	};
 </script>
 
 <svelte:head>
@@ -54,7 +38,7 @@
 	<meta name="description" content="Eskil Ganslandt portfolio" />
 </svelte:head>
 
-<div class="app" onmousemove={onHover} role="presentation">
+<div class="app">
 	<!-- <header>
 		<div>
 			<a href="/">Home</a>
@@ -76,18 +60,6 @@
 
 <style>
 	.app {
-		--bg-color: var(--background);
-		--drop-color: rgba(var(--primary-values), 0.02);
-		--drop-x: 0;
-		--drop-y: 0;
-
-		background-color: var(--bg-color);
-		background-image: radial-gradient(
-			circle at var(--drop-x) var(--drop-y),
-			var(--drop-color),
-			transparent 20%
-		);
-
 		display: grid;
 		grid-template-rows: auto 1fr auto;
 		min-height: 100%;

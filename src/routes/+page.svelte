@@ -11,7 +11,7 @@
 	</picture> -->
 <div class="page full-width">
 	<ScrollButton>
-		<img loading="lazy" src="/profilbild.jpg" alt="Eskil Ganslandt" />
+		<img loading="lazy" src="/images/profilbild.jpg" alt="Eskil Ganslandt" />
 
 		<div class="column">
 			<h1>Eskil Ganslandt</h1>
