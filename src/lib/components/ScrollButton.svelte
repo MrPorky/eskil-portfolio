@@ -16,15 +16,15 @@
 	section {
 		display: flex;
 		align-items: center;
-		gap: 4rem;
+		gap: var(--space-xxl);
 		padding-bottom: 80px;
-		padding-top: 2rem;
+		padding-top: var(--space-lg);
 	}
 
 	@media screen and (max-width: 600px) {
 		section {
 			flex-direction: column;
-			gap: 1rem;
+			gap: var(--space-lg);
 		}
 	}
 
@@ -36,7 +36,7 @@
 		z-index: 2;
 		display: inline-block;
 		transform: translate(-50%);
-		color: var(--background-text);
+		color: var(--text);
 		letter-spacing: 0.1em;
 		text-decoration: none;
 		transition: opacity 0.3s;
@@ -49,8 +49,8 @@
 		width: 24px;
 		height: 24px;
 		margin-left: -12px;
-		border-left: 1px solid var(--background-text);
-		border-bottom: 1px solid var(--background-text);
+		border-left: 1px solid var(--text);
+		border-bottom: 1px solid var(--text);
 		transform: rotate(-45deg);
 		box-sizing: border-box;
 	}

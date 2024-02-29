@@ -6,19 +6,25 @@
 	import Technologies from '$lib/components/Technologies.svelte';
 </script>
 
-<!-- <picture>
-		<source srcset="/profilbild.png" />
-	</picture> -->
 <div class="page full-width">
 	<ScrollButton>
-		<img loading="lazy" src="/images/profilbild.jpg" alt="Eskil Ganslandt" />
+		<img
+			loading="eager"
+			src="/optimized/profilbild.webp"
+			alt="Eskil Ganslandt"
+			width="1200"
+			height="1600"
+		/>
 
 		<div class="column">
 			<h1>Eskil Ganslandt</h1>
-			<p>
-				I'm an enthusiastic problem solver that has dedicated almost my entire life to programming.
-			</p>
-			<p>I'm always up for a challenge where I can learn something new</p>
+			<div class="column sm">
+				<p>
+					I'm an enthusiastic problem solver that has dedicated almost my entire life to
+					programming.
+				</p>
+				<p>I'm always up for a challenge where I can learn something new</p>
+			</div>
 			<div class="links row">
 				<a
 					class="icon"
@@ -58,15 +64,9 @@
 	img {
 		max-height: 40%;
 		max-width: 250px;
-		object-fit: contain;
-	}
-
-	h1 {
-		font-weight: 400;
-		font-size: 2.5rem;
 	}
 
 	.links a {
-		color: var(--background-text);
+		color: var(--text);
 	}
 </style>

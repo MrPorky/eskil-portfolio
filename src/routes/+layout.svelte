@@ -2,12 +2,12 @@
 	import { browser } from '$app/environment';
 	import { enhance } from '$app/forms';
 	import { noRouting } from '$lib/utills/formEnhance';
+	import './global.css';
 
 	import sun from '@fortawesome/fontawesome-free/svgs/regular/sun.svg?raw';
 	import moon from '@fortawesome/fontawesome-free/svgs/regular/moon.svg?raw';
 
 	import type { LayoutData } from './$types';
-	import type { MouseEventHandler } from 'svelte/elements';
 
 	let { data } = $props<{ data: LayoutData }>();
 
@@ -39,7 +39,7 @@
 </svelte:head>
 
 <div class="app">
-	<!-- <header>
+	<header>
 		<div>
 			<a href="/">Home</a>
 			<a href="/cases">Cases</a>
@@ -51,7 +51,7 @@
 				</button>
 			</form>
 		</nav>
-	</header> -->
+	</header>
 	<main class="content-grid">
 		<slot />
 	</main>
@@ -66,11 +66,13 @@
 	}
 
 	header {
-		position: sticky;
+		position: fixed;
 		top: 0;
+		left: 0;
+		right: 0;
 		border-bottom: 1px solid var(--border);
-		background-color: var(--background);
-		color: var(--background-text);
+		background-color: var(--base);
+		color: var(--neutral);
 		padding: 0.25rem 1rem;
 		display: flex;
 		z-index: 1000;
@@ -86,11 +88,12 @@
 	header a {
 		all: unset;
 		cursor: pointer;
-		color: var(--background-text);
+		color: var(--neutral);
 		border-bottom: 1px solid currentColor;
+		transition: 200ms color;
 	}
 
 	header a:hover {
-		color: var(--primary-hover);
+		color: var(--primary);
 	}
 </style>

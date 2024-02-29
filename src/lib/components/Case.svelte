@@ -14,7 +14,7 @@
 	</div>
 	<div class="content animate-in-and-out column">
 		<div>
-			<h2>{name}</h2>
+			<h3>{name}</h3>
 			<i>at {employment}</i>
 		</div>
 		<p>{description}</p>
@@ -54,7 +54,7 @@
 	.connector {
 		width: 2px;
 		flex-grow: 1;
-		background-color: var(--secondary);
+		background-color: var(--border);
 	}
 
 	.dot {
@@ -63,7 +63,7 @@
 		justify-content: center;
 		border-radius: 50%;
 		margin: 1rem 0px;
-		color: var(--primary-text);
+		color: var(--neutral);
 		background-color: var(--primary);
 		aspect-ratio: 1/1;
 		width: 3rem;
@@ -83,7 +83,8 @@
 	}
 
 	i {
-		opacity: 0.75;
+		display: block;
+		color: var(--text-2);
 	}
 
 	@media screen and (max-width: 600px) {

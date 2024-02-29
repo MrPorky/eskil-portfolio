@@ -15,8 +15,8 @@
 
 <style>
 	.tag {
-		background-color: var(--secondary);
-		color: var(--secondary-text);
+		background-color: var(--surface);
+		color: var(--text-2);
 		padding: 1rem;
 		border-radius: 0.5rem;
 		white-space: nowrap;
