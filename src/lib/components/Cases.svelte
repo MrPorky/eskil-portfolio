@@ -3,11 +3,7 @@
 	import Case from './Case.svelte';
 </script>
 
-<svelte:head>
-	<title></title>
-</svelte:head>
-
-<div class="timeline">
+<ul class="timeline">
 	{#each cases as c, i}
 		<Case
 			description={c.description}
@@ -19,7 +15,7 @@
 			year={c.year}
 		/>
 	{/each}
-</div>
+</ul>
 
 <style>
 	.timeline {

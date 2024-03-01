@@ -16,6 +16,7 @@
 	section {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: var(--space-xxl);
 		padding-bottom: 80px;
 		padding-top: var(--space-lg);

@@ -39,7 +39,7 @@
 </svelte:head>
 
 <div class="app">
-	<header>
+	<!-- <header>
 		<div>
 			<a href="/">Home</a>
 			<a href="/cases">Cases</a>
@@ -51,7 +51,7 @@
 				</button>
 			</form>
 		</nav>
-	</header>
+	</header> -->
 	<main class="content-grid">
 		<slot />
 	</main>

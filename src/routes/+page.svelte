@@ -4,9 +4,11 @@
 	import Cases from '$lib/components/Cases.svelte';
 	import ScrollButton from '$lib/components/ScrollButton.svelte';
 	import Technologies from '$lib/components/Technologies.svelte';
+	import Fireflies from '$lib/components/Fireflies.svelte';
 </script>
 
-<div class="page full-width">
+<div class="page full-width content-grid">
+	<Fireflies />
 	<ScrollButton>
 		<img
 			loading="eager"
@@ -50,9 +52,11 @@
 		</div>
 	</ScrollButton>
 
-	<section id="cases">
+	<section id="cases" class="full-width content-grid">
 		<h2 class="animate-in-and-out">Cases</h2>
-		<Cases />
+		<div class="breakout">
+			<Cases />
+		</div>
 	</section>
 </div>
 
@@ -68,5 +72,9 @@
 
 	.links a {
 		color: var(--text);
+	}
+
+	#cases {
+		row-gap: var(--space-xl);
 	}
 </style>
