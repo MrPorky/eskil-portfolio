@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 39.563">
+  <g id="Group_372" data-name="Group 372" transform="translate(2568.5 -798.836)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="18.5" cy="18.5" r="18.5"
+      transform="translate(-2559.5 798.836)" fill="#822973"></circle>
+    <path id="Subtraction_2" data-name="Subtraction 2"
+      d="M6.83,13.495A6.85,6.85,0,0,1,2,11.519,6.721,6.721,0,0,1,.537,9.374a6.695,6.695,0,0,1,0-5.253A6.721,6.721,0,0,1,2,1.976,6.9,6.9,0,0,1,9.32.463,6.82,6.82,0,0,1,11.4,1.733L8.823,4.224l0,0A1.481,1.481,0,0,0,10.4,6.7l0,.005.023-.017a1.475,1.475,0,0,0,.473-.353l2.393-1.787a6.69,6.69,0,0,1-1.63,6.97A6.85,6.85,0,0,1,6.83,13.495Z"
+      transform="translate(-2568.5 824.904)" fill="#822973"></path>
+    <text id="OsstellConnect" data-name="OsstellConnect" fill="#822973" stroke="rgba(0,0,0,0)"
+      transform="translate(-2434.5 827.836)" stroke-width="1" font-size="28"
+      font-family="SourceSansPro-Light, Source Sans Pro" font-weight="300" letter-spacing="-0.04em">
+      <tspan x="-80.542" y="0">OsstellConnect</tspan>
+    </text>
+  </g>
+</svg>

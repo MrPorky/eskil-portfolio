@@ -5,20 +5,13 @@
 
 <ul class="timeline">
 	{#each cases as c, i}
-		<Case
-			description={c.description}
-			link={c.link}
-			name={c.name}
-			technologies={c.technologies}
-			employment={c.employment}
-			left={i % 2 === 0}
-			year={c.year}
-		/>
+		<Case {...c} left={i % 2 === 0} />
 	{/each}
 </ul>
 
 <style>
 	.timeline {
+		all: unset;
 		display: flex;
 		flex-direction: column;
 	}

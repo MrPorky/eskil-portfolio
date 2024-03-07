@@ -62,30 +62,32 @@ export type AnimateParams = {
  * Animates the given parameters over a specified duration using the provided timing function and draw callback.
  *
  * @param {AnimateParams} params - An object containing the timing, draw, and duration parameters
- * @return {void}
+ * @return {() => void} - A function to cancel the animation
  */
-export const animate = ({ timing, draw, duration, onComplete }: AnimateParams) => {
-	const start = performance.now();
+export const animate = ({ timing, draw, duration, onComplete }: AnimateParams): (() => void) => {
+	const startTime = performance.now();
+	let isStopped = false;
 
-	/**
-	 * A function that takes a time parameter and performs certain calculations and drawing operations based on that time.
-	 *
-	 * @param {number} time - the time parameter for the calculations
-	 * @return {void}
-	 */
-	const step = (time: number) => {
-		const elapsed = time - start;
-		const timeFraction = Math.min(elapsed / duration, 1);
+	const cancelAnimation = () => {
+		isStopped = true;
+	};
+
+	const animationStep = (currentTime: number) => {
+		if (isStopped) return;
+
+		const elapsedTime = currentTime - startTime;
+		const timeFraction = Math.min(elapsedTime / duration, 1);
 		const progress = timing?.(timeFraction) ?? timeFraction;
 
 		draw(progress);
 
 		if (timeFraction < 1) {
-			requestAnimationFrame(step);
+			requestAnimationFrame(animationStep);
 		} else {
 			onComplete?.();
 		}
 	};
 
-	requestAnimationFrame(step);
+	requestAnimationFrame(animationStep);
+	return cancelAnimation;
 };

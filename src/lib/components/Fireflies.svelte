@@ -48,22 +48,30 @@
 		const resize = () => {
 			if (!el) return;
 
-			el.innerHTML = '';
 			w = el.offsetParent?.clientWidth ?? window.innerWidth;
 			h = el.offsetParent?.clientHeight ?? window.innerHeight;
 
 			if (!w || !h) return;
 
-			const flies = Math.min(allIcons.length, Math.round((w * h) / 20000));
-			for (let i = 0; i < flies; i++) {
-				const firefly = document.createElement('div');
-				firefly.className = 'firefly icon';
-				el.appendChild(firefly);
-				const startPos = randomVector();
-				firefly.style.left = `${startPos.x}px`;
-				firefly.style.top = `${startPos.y}px`;
-				firefly.innerHTML = allIcons[i % allIcons.length];
-				fromTo(firefly, 20000 + Math.random() * 20000, randomVector(), randomVector());
+			const flies = Math.min(allIcons.length, Math.round((w * h) / 50000));
+
+			if (el.childElementCount > flies) {
+				const toRemove = el.childElementCount - flies;
+				for (let i = 0; i < toRemove; i++) {
+					el.children[el.childElementCount - 1].remove();
+				}
+			} else if (el.childElementCount < flies) {
+				const toAdd = flies - el.childElementCount;
+				for (let i = 0; i < toAdd; i++) {
+					const firefly = document.createElement('div');
+					firefly.className = 'firefly icon';
+					el.appendChild(firefly);
+					const startPos = randomVector();
+					firefly.style.left = `${startPos.x}px`;
+					firefly.style.top = `${startPos.y}px`;
+					firefly.innerHTML = allIcons[el.childElementCount - 1];
+					fromTo(firefly, 20000 + Math.random() * 20000, randomVector(), randomVector());
+				}
 			}
 		};
 

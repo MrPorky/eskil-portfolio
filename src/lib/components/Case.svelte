@@ -1,7 +1,8 @@
 <script lang="ts">
 	import type { Case } from '$lib/data';
 	type Props = Case & { left: boolean };
-	const { description, employment, left, name, technologies, link, year } = $props<Props>();
+	const { description, employment, left, name, technologies, icon, iconOpacity, link, year } =
+		$props<Props>();
 </script>
 
 <li class="container {left ? 'left' : 'right'}">
@@ -9,27 +10,66 @@
 		<span class="dot" />
 		<span class="connector" />
 	</div>
-	<div class="content">
-		<div class="date">{year}</div>
-		<div class="descr column">
-			<div>
-				<h3>{name}</h3>
-				<i>at {employment}</i>
+	<div class="content" class:link={link !== undefined}>
+		{#snippet snippet()}
+			<div class="date">{year}</div>
+			<div class="descr column">
+				<div class="column">
+					<h3>{name}</h3>
+					<i>at {employment}</i>
+				</div>
+				<p>{description}</p>
+
+				{#if icon}
+					<div class="icon" style="--iconOpacity: {iconOpacity};">
+						{@html icon}
+					</div>
+				{/if}
 			</div>
-			<p>{description}</p>
-			{#if link}
-				<a href={link} rel="noreferrer">See case</a>
-			{/if}
-		</div>
+		{/snippet}
+
+		{#if link}
+			<a href={link}>
+				{@render snippet()}
+			</a>
+		{:else}
+			{@render snippet()}
+		{/if}
 	</div>
 </li>
 
 <style>
+	.icon {
+		position: absolute;
+		inset: var(--space-sm);
+		right: unset;
+		width: calc(100% - var(--space-sm) * 2);
+		height: calc(100% - var(--space-sm) * 2);
+		z-index: -1;
+	}
+
+	.icon::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			270deg,
+			var(--base),
+			rgba(var(--base-values), var(--iconOpacity)) 100%
+		);
+	}
+
 	.container {
-		--header-height: 3rem;
+		--header-height: 2rem;
+		--box-shadow: 0px 5px 10px rgba(var(--primary-values), 0.05);
+		--box-shadow-hover: 0px 5px 15px rgba(var(--primary-values), 0.15);
+
+		all: unset;
 		display: flex;
 		position: relative;
 		min-height: 70px;
+		font-size: 1.25rem;
+		font-weight: 700;
 	}
 
 	.container::before {
@@ -39,6 +79,7 @@
 
 	/* Card */
 	.content {
+		position: relative;
 		margin: 0;
 		flex: 1;
 		text-align: left;
@@ -51,7 +92,7 @@
 		flex-direction: column;
 		flex: 0;
 		align-items: center;
-		padding-inline-end: var(--space-md);
+		padding-inline-end: calc(var(--header-height) / 2);
 		pointer-events: none;
 	}
 
@@ -90,14 +131,18 @@
 		background-color: var(--primary);
 
 		color: var(--base);
-		font-size: 1.25rem;
-		font-weight: 700;
 
 		display: grid;
 		place-content: center;
 		position: relative;
 
 		border-radius: calc(var(--header-height) / 2) 0 0 calc(var(--header-height) / 2);
+		box-shadow: var(--box-shadow);
+		transition: box-shadow 0.3s ease-in-out;
+	}
+
+	.link:hover .date {
+		box-shadow: var(--box-shadow-hover);
 	}
 
 	i {
@@ -108,7 +153,7 @@
 	/* date flap */
 	.date::before {
 		content: '';
-		width: var(--space-md);
+		width: calc(var(--header-height) / 2);
 		aspect-ratio: 1;
 		background: var(--primary);
 		background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
@@ -121,24 +166,28 @@
 
 	/* descr */
 	.descr {
-		background: var(--base);
+		color: var(--text);
 		position: relative;
-		padding-inline: var(--space-md);
-		margin-inline: var(--space-md);
-	}
-	.descr {
-		padding-block: var(--space-md);
-		font-weight: 300;
+		padding: calc(var(--header-height) / 2);
+		margin-inline: calc(var(--header-height) / 2);
 		border: 1px solid var(--border);
-		box-shadow: 0px 5px 10px rgba(var(--primary-values), 0.05);
+		background-color: rgba(var(--primary-values), 0.05);
+		box-shadow: var(--box-shadow);
+		transition-property: box-shadow, background-color;
+		transition-duration: 0.3s;
+		transition-timing-function: ease-in-out;
 	}
 
-	.descr::before {
-		z-index: -1;
-		bottom: 0.25rem;
+	.descr > .column {
+		gap: 0.2rem;
 	}
 
-	@media (min-width: 40rem) {
+	.link:hover .descr {
+		background-color: rgba(var(--primary-values), 0.1);
+		box-shadow: var(--box-shadow-hover);
+	}
+
+	@media (min-width: 770px) {
 		li:nth-child(odd) .date::before {
 			clip-path: polygon(0 0, 100% 0, 100% 100%);
 			left: 0;
@@ -157,7 +206,13 @@
 		}
 
 		.sepparator {
-			padding-inline-start: var(--space-md);
+			padding-inline-start: calc(var(--header-height) / 2);
+		}
+	}
+
+	@media (min-width: 600px) {
+		.container {
+			--header-height: 3rem;
 		}
 	}
 </style>

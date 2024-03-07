@@ -27,6 +27,12 @@ import unity from './unity.svg?raw';
 import vite from './vite.svg?raw';
 import vitest from './vitest.svg?raw';
 import vue from './vue.svg?raw';
+import yara from './YARA_Logo.svg?raw';
+import volvo from './volvo-logo-2021.svg?raw';
+import ostell from './ostell.svg?raw';
+import emerson from './emerson-electric.svg?raw';
+import ericsson from './ericsson.svg?raw';
+import guardtools from './guardtools.svg?raw';
 
 export default {
 	aws,
@@ -57,5 +63,11 @@ export default {
 	unity,
 	vite,
 	vitest,
-	vue
+	vue,
+	yara,
+	volvo,
+	ostell,
+	emerson,
+	ericsson,
+	guardtools
 };

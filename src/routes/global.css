@@ -1,4 +1,4 @@
-*:not(style, script, svg *) {
+*:not(head, style, script, svg, svg *, ul, li) {
 	all: unset;
 	box-sizing: border-box;
 	font-family: 'Inter', sans-serif;
@@ -8,6 +8,12 @@
 	font-variation-settings: 'slnt' 0;
 
 	scrollbar-width: none;
+}
+
+ul {
+	padding-inline-start: max(1em, 1rem);
+	margin: 0;
+	font-size: var(--text-sm);
 }
 
 a,
@@ -70,6 +76,8 @@ button {
 	--surface: rgba(var(--primary-values), 0.05);
 	--border: rgba(var(--primary-values), 0.15);
 
+	--mobile-breakpoint: 600px;
+
 	background-color: var(--base);
 	color: var(--text);
 
@@ -119,20 +127,29 @@ body {
 }
 
 .icon {
-	--size: 1rem;
+	--size: auto;
 	display: inline-block;
 	width: var(--size);
 	height: var(--size);
 }
 
-.icon > svg {
+.icon svg {
 	width: 100%;
 	height: 100%;
+}
+
+.icon img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.icon.currentColor svg {
 	fill: currentColor;
 	stroke: currentColor;
 }
 
-.icon > svg * {
+.icon.currentColor > svg * {
 	fill: currentColor !important;
 	stroke: currentColor !important;
 }
@@ -156,7 +173,7 @@ button:hover {
 }
 
 .content-grid {
-	--padding-inline: 2rem;
+	--padding-inline: 1rem;
 	--content-max-width: 770px;
 	--breakout-max-width: 900px;
 
@@ -164,6 +181,7 @@ button:hover {
 
 	display: grid;
 	row-gap: 1rem;
+	grid-template-rows: min-content;
 	grid-template-columns:
 		[full-width-start]
 		minmax(var(--padding-inline), 1fr)
@@ -222,7 +240,7 @@ section {
 
 .row {
 	display: flex;
-	flex-flow: row;
+	flex-flow: column;
 	gap: var(--space-md);
 }
 
@@ -231,10 +249,32 @@ section {
 	flex-flow: column;
 	gap: var(--space-md);
 }
+
 .column.sm {
 	display: flex;
 	flex-flow: column;
 	gap: var(--space-sm);
+}
+
+.divider {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.divider::before {
+	content: '';
+	position: absolute;
+	inset: 0%;
+	top: calc(50% - 0.5px);
+	bottom: calc(50% - 0.5px);
+	background: linear-gradient(
+		270deg,
+		rgba(var(--primary-values), 0) 0%,
+		rgba(var(--primary-values), 0.5) 20%,
+		rgba(var(--primary-values), 0.5) 80%,
+		rgba(var(--primary-values), 0) 100%
+	);
 }
 
 img {
@@ -268,6 +308,15 @@ i {
 	font-size: var(--text-xs);
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+div {
+	display: block;
+}
+
 .firefly {
 	position: absolute;
 	width: 32px;
@@ -277,4 +326,10 @@ i {
 	z-index: -1;
 	filter: grayscale(1) invert(65%) contrast(100%);
 	opacity: 0.6;
+}
+
+@media (min-width: 600px) {
+	.row {
+		flex-flow: row;
+	}
 }

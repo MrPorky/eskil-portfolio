@@ -53,7 +53,7 @@
 	</ScrollButton>
 
 	<section id="cases" class="full-width content-grid">
-		<h2 class="animate-in-and-out">Cases</h2>
+		<h2>Cases</h2>
 		<div class="breakout">
 			<Cases />
 		</div>
