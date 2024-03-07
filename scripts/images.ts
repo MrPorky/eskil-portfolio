@@ -3,6 +3,9 @@ import fs from 'fs';
 import path from 'path';
 
 const resizeTo = async (fromPath: string, toPath: string, targetWidth: number) => {
+	const dir = path.dirname(toPath);
+	await fs.mkdirSync(dir, { recursive: true });
+
 	const { width: originalWidth } = await sharp(fromPath).metadata();
 
 	if (!originalWidth) {
