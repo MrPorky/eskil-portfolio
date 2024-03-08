@@ -34,7 +34,7 @@ import emerson from './emerson-electric.svg?raw';
 import ericsson from './ericsson.svg?raw';
 import guardtools from './guardtools.svg?raw';
 
-export default {
+export const skills = {
 	aws,
 	azure,
 	css,
@@ -63,11 +63,19 @@ export default {
 	unity,
 	vite,
 	vitest,
-	vue,
+	vue
+};
+
+const compamies = {
 	yara,
 	volvo,
 	ostell,
 	emerson,
 	ericsson,
 	guardtools
+};
+
+export default {
+	...skills,
+	...compamies
 };

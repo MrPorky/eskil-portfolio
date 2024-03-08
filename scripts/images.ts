@@ -41,6 +41,8 @@ await resizeTo('./static/osstell/2.png', './static/optimized/osstell/2.webp', 40
 await resizeTo('./static/guardtools/1.webp', './static/optimized/guardtools/1.webp', 400);
 await resizeTo('./static/guardtools/2.webp', './static/optimized/guardtools/2.webp', 400);
 
+await resizeTo('./static/happy faces/logo.png', './static/optimized/happy faces/logo.webp', 250);
+
 await resizeTo('./static/grafokett/logo.png', './static/optimized/grafokett/logo.webp', 250);
 await resizeTo('./static/grafokett/1.png', './static/optimized/grafokett/1.webp', 400);
 await resizeTo('./static/grafokett/2.jpg', './static/optimized/grafokett/2.webp', 400);

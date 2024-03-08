@@ -358,8 +358,8 @@ export const cases: Case[] = [
 		name: 'Scan, Weigh, Record',
 		technologies: ['React Native'],
 		year: 2019,
-		icon: '',
-		iconOpacity: 0.8,
+		icon: '<img src="/optimized/happy faces/logo.webp" loading="lazy" alt="Happy Faces logo"/>',
+		iconOpacity: 0.5,
 		content: [],
 		description:
 			"The Happy Faces restaurant approached QueensLab with the goal of automating their kitchen operations, streamlining warehousing, simplifying inventory management, and enabling recipe setup. As part of a QueensLab team, I contributed to the development of a React Native application tailored for daily use by restaurant staff. My responsibilities included implementing functionality for creating, reading, and printing QR/bar codes, which was a crucial aspect of the application. With the project's tight deadline, I collaborated closely with both backend developers and UX designers to ensure timely completion."
@@ -408,18 +408,24 @@ export const cases: Case[] = [
 		technologies: ['VueJS', 'Storybook'],
 		year: 2019,
 		link: '/grafokett',
-		icon: '<img src="/optimized/grafokett/logo.webp" />',
+		icon: '<img src="/optimized/grafokett/logo.webp"  loading="lazy" alt="Grafokett logo"/>',
 		iconOpacity: 0.75,
 		content: [
 			{
 				title: 'The Product',
 				img: '/optimized/grafokett/1.webp',
-				content: []
+				content: [
+					'Cloudlabel is a cloud-based label management software',
+					'The software makes it easy to generate barcodes as well as design, manage, and print labels'
+				]
 			},
 			{
 				title: 'My role',
 				img: '/optimized/grafokett/2.webp',
-				content: []
+				content: [
+					'I had the role of lead frontend developer',
+					'I built all components in isolation from the system in storybook'
+				]
 			}
 		],
 		description:

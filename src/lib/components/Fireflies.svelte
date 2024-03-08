@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { animate, bezier, type Vector2 } from '$lib/animate';
-	import * as icons from '$lib/icons';
+	import { skills as icons } from '$lib/icons';
 
-	const allIcons = Object.values(icons.default).sort((a, b) => Math.random() - 0.5);
+	const allIcons = Object.values(icons).sort((a, b) => Math.random() - 0.5);
 
 	let w = $state<number>(0);
 	let h = $state<number>(0);

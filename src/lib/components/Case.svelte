@@ -43,8 +43,8 @@
 		position: absolute;
 		inset: var(--space-sm);
 		right: unset;
-		width: calc(100% - var(--space-sm) * 2);
-		height: calc(100% - var(--space-sm) * 2);
+		max-width: calc(100% - var(--space-sm) * 2);
+		max-height: calc(100% - var(--space-sm) * 2);
 		z-index: -1;
 	}
 
