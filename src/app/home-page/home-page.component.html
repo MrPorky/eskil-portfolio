@@ -1,0 +1,52 @@
+<app-fireflies></app-fireflies>
+<div class="page full-width content-grid">
+  <app-scroll-button>
+    <img
+      loading="eager"
+      src="assets/profilbild.webp"
+      alt="Eskil Ganslandt"
+      width="1200"
+      height="1600"
+    />
+
+    <div class="column">
+      <h1>Eskil Ganslandt</h1>
+      <div class="column sm">
+        <p>
+          I'm an enthusiastic problem solver that has dedicated almost my entire
+          life to programming.
+        </p>
+        <p>I'm always up for a challenge where I can learn something new</p>
+      </div>
+      <div class="links row">
+        <a
+          class="icon currentColor"
+          style="--size: 1.5rem"
+          href="https://github.com/MrPorky"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Visit Github"
+          [innerHTML]="github"
+        >
+        </a>
+        <a
+          class="icon currentColor"
+          style="--size: 1.5rem"
+          href="https://www.linkedin.com/in/eskil-ganslandt-b5b3a6115/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Visit Linkedin"
+          [innerHTML]="linkedin"
+        >
+        </a>
+      </div>
+    </div>
+  </app-scroll-button>
+
+  <section id="cases" class="full-width content-grid">
+    <h2>Cases</h2>
+    <div class="breakout">
+      <app-cases></app-cases>
+    </div>
+  </section>
+</div>

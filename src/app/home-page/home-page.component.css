@@ -1,0 +1,16 @@
+.page {
+  grid-template-rows: 100vh 1fr;
+}
+
+img {
+  max-height: 40%;
+  max-width: 250px;
+}
+
+.links a {
+  color: var(--text);
+}
+
+#cases {
+  row-gap: var(--space-xl);
+}

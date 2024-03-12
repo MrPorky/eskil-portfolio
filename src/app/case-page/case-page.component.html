@@ -1,0 +1,33 @@
+<section class="page content-grid full-width">
+  <div class="header column">
+    <h2>{{ data.company }}</h2>
+    <h4>{{ data.name }}</h4>
+    <div class="divider"></div>
+    <p class="description">{{ data.description }}</p>
+    <div
+      class="icon"
+      [style.--iconopacity]="data.iconOpacity"
+      [innerHTML]="svg"
+    ></div>
+  </div>
+  <div class="divider breakout"></div>
+  <div class="body column">
+    @for (c of data.content; track data; let i = $index;) {
+    <div class="row {{ i % 2 === 0 ? 'left' : 'right' }}">
+      <img src="{{ c.img }}" alt="Vessel Optimization" />
+      <div class="column">
+        <h3>{{ c.title }}</h3>
+        @for (p of c.content; track data) { @if ( isArray( p)) {
+        <ul>
+          @for (item of p; track data) {
+          <li>{{ item }}</li>
+          }
+        </ul>
+        } @else {
+        <p>{{ p }}</p>
+        } }
+      </div>
+    </div>
+    }
+  </div>
+</section>
