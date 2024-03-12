@@ -67,9 +67,6 @@ devDependencies:
   '@types/node':
     specifier: ^18.18.0
     version: 18.19.22
-  '@types/node-hook':
-    specifier: ^1.0.3
-    version: 1.0.3
   jasmine-core:
     specifier: ~5.1.0
     version: 5.1.2
@@ -88,9 +85,6 @@ devDependencies:
   karma-jasmine-html-reporter:
     specifier: ~2.1.0
     version: 2.1.0(jasmine-core@5.1.2)(karma-jasmine@5.1.0)(karma@6.4.3)
-  node-hook:
-    specifier: ^1.0.0
-    version: 1.0.0
   sharp:
     specifier: ^0.33.2
     version: 0.33.2
@@ -2853,10 +2847,6 @@ packages:
       '@types/node': 18.19.22
     dev: true
 
-  /@types/node-hook@1.0.3:
-    resolution: {integrity: sha512-jI3xQC02VV3FoovLLRoK3U1As1rU/O10zdN8WumMRRk0d4AC1dN+4Vlyt8icIWI9tSlaSJX555HQwApGRW02RQ==}
-    dev: true
-
   /@types/node@18.19.22:
     resolution: {integrity: sha512-p3pDIfuMg/aXBmhkyanPshdfJuX5c5+bQjYLIikPLXAUycEogij/c50n/C+8XOA5L93cU4ZRXtn+dNQGi0IZqQ==}
     dependencies:
@@ -5613,10 +5603,6 @@ packages:
       which: 4.0.0
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /node-hook@1.0.0:
-    resolution: {integrity: sha512-tBTIHwkzXvbesP0fY495VsqSWCOS5Ttt5+mAmeqUC1yglCiSYarNewfi2Q+HOL+M6pZYYqwGU6jIi5+gIHQbpg==}
     dev: true
 
   /node-releases@2.0.14:
