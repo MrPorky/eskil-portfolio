@@ -7,6 +7,7 @@
     "start": "ng serve",
     "build": "ng build",
     "netlify": "pnpm images && pnpm routesFile && pnpm build",
+    "preview": "netlify serve",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:eskil-portfolio": "node dist/eskil-portfolio/server/server.mjs",

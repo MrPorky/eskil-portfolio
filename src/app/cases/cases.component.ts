@@ -10,5 +10,5 @@ import { cases } from '../../data';
   styleUrl: './cases.component.css',
 })
 export class CasesComponent {
-  cases = cases.map((c, i) => ({ ...c, left: i % 2 === 0 }));
+  cases = cases;
 }

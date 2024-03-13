@@ -9,9 +9,12 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   imports: [NgTemplateOutlet],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css',
+  host: {
+    role: 'listitem',
+  },
 })
 export class CardComponent implements OnInit {
-  @Input() case!: Case & { left: boolean };
+  @Input() case!: Case;
 
   icon: SafeHtml = '';
 

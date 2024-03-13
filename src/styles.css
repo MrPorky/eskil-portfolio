@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-*:not(head, style, script, svg, svg *, ul, li) {
+*:not(head, style, script, svg, svg *, ul, li),
+*::before,
+*::after {
   all: unset;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
@@ -7,8 +9,7 @@
   font-weight: 200;
   font-style: normal;
   font-variation-settings: "slnt" 0;
-
-  scrollbar-width: none;
+  color: var(--text-1);
 }
 
 ul {
@@ -158,6 +159,26 @@ body {
   fill: currentColor !important;
 }
 
+.icon.fade {
+  position: absolute;
+  inset: var(--space-sm);
+  left: unset;
+  max-width: calc(100% - var(--space-sm) * 2);
+  max-height: calc(100% - var(--space-sm) * 2);
+  z-index: -1;
+}
+
+.icon.fade::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--base),
+    rgba(var(--base-values), var(--iconopacity)) 100%
+  );
+}
+
 button {
   all: unset;
   padding: 0.25rem;
@@ -222,8 +243,15 @@ section {
 
 .row {
   display: flex;
-  flex-flow: column;
   gap: var(--space-md);
+  flex-flow: row;
+}
+
+.row.md {
+  flex-flow: column;
+}
+.row.md.reverse {
+  flex-flow: column-reverse;
 }
 
 .column {
@@ -288,6 +316,7 @@ p {
 
 i {
   font-size: var(--text-xs);
+  color: var(--text-2);
 }
 
 h1,
@@ -311,13 +340,10 @@ div {
 }
 
 @media (min-width: 600px) {
-  .row {
+  .row.md {
     flex-flow: row;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  :root {
-    scroll-behavior: smooth;
+  .row.md.reverse {
+    flex-flow: row-reverse;
   }
 }

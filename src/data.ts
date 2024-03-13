@@ -210,6 +210,7 @@ type Block = string | string[];
 type Content = {
   title: string;
   img: string;
+  alt: string;
   content: Block[];
 };
 
@@ -239,7 +240,8 @@ export const cases: Case[] = [
     content: [
       {
         title: 'The Product',
-        img: '/assets/yara/1.webp',
+        img: '/assets/images/yara/1.webp',
+        alt: 'Blueprint of a big vessel',
         content: [
           'Vessel Optimization solutions offer a unique combination of direct, real-time fuel optimization and data analysis over time, leading to improved operational efficiency.',
           'Vessel optimization is a combination of FuelOpt, Fleet Analytics and Route Pilot AI',
@@ -248,7 +250,8 @@ export const cases: Case[] = [
       },
       {
         title: 'My role',
-        img: '/assets/yara/2.webp',
+        img: '/assets/images/yara/2.webp',
+        alt: 'An ipad showing fleat analytics ui',
         content: [
           'I worked on the Fleet Analytics platform as a lead front-end developer',
           'As lead i took on the responsibilities of building a design system built on Mui. I documented the design system in Storybook together with working exampels of components',
@@ -277,7 +280,8 @@ export const cases: Case[] = [
     content: [
       {
         title: 'The Product',
-        img: '/assets/volvo/1.webp',
+        img: '/assets/images/volvo/1.webp',
+        alt: 'Different devices showing the customer portal ui',
         content: [
           'Volvo Connect is a system for managing your bus fleet and your gateway to all Vehicle services.',
           'Here you will find everything from connected services to documentation and workshop services.',
@@ -286,7 +290,8 @@ export const cases: Case[] = [
       },
       {
         title: 'My role',
-        img: '/assets/volvo/2.webp',
+        img: '/assets/images/volvo/2.webp',
+        alt: 'A person working in customer connect',
         content: [
           'I worked on the Customer portal admin page as a senior front-end developer',
           'I Implemented new features for the administration tool and mantained the codebase',
@@ -311,7 +316,8 @@ export const cases: Case[] = [
     content: [
       {
         title: 'The Product',
-        img: '/assets/osstell/1.webp',
+        img: '/assets/images/osstell/1.webp',
+        alt: 'A reprensentation of the layers used in osstell to present a mouth',
         content: [
           'OsstellConnect is a cloud-based solution offering a new way for clinicians to use data to enhance their dental implant treatments',
           'With the ConsultationTool in OsstellConnect you can easily describe the different steps of a proposed procedure in a science-based, easyto-understand way from surgery to final restoration with estimations of time between the different procedures',
@@ -319,7 +325,8 @@ export const cases: Case[] = [
       },
       {
         title: 'My role',
-        img: '/assets/osstell/2.webp',
+        img: '/assets/images/osstell/2.webp',
+        alt: 'An ipad showing ostell connect ui',
         content: [
           'At osstell I worked on the Osstell Connect mobile application as a front-end developer',
           'I also helped build an bluetooth implementation to the Osstell Beacon',
@@ -365,7 +372,7 @@ export const cases: Case[] = [
     name: 'Scan, Weigh, Record',
     technologies: ['React Native'],
     year: 2019,
-    icon: '<img src="/assets/happy faces/logo.webp" loading="lazy" alt="Happy Faces logo"/>',
+    icon: '<img src="/assets/images/happy faces/logo.webp" loading="lazy" alt="Happy Faces logo"/>',
     iconOpacity: 0.5,
     content: [],
     description:
@@ -383,7 +390,8 @@ export const cases: Case[] = [
     content: [
       {
         title: 'The Product',
-        img: '/assets/guardtools/1.webp',
+        img: '/assets/images/guardtools/1.webp',
+        alt: 'A person sitting infront of a lot of screans showing data from guardtools',
         content: [
           'Guardtools is a system desigend as a solution for security officers',
           'The tool is used to manage alarms and set up complex and performance-demanding graphs to provide relevant insights from large amounts of data',
@@ -391,7 +399,8 @@ export const cases: Case[] = [
       },
       {
         title: 'My role',
-        img: '/assets/guardtools/2.webp',
+        img: '/assets/images/guardtools/2.webp',
+        alt: 'A graph from the ui in focus',
         content: [
           'I had the role of lead frontend developer',
           'I built all components in isolation from the system in storybook',
@@ -415,12 +424,13 @@ export const cases: Case[] = [
     technologies: ['VueJS', 'Storybook'],
     year: 2019,
     link: '/grafokett',
-    icon: '<img src="/assets/grafokett/logo.webp"  loading="lazy" alt="Grafokett logo"/>',
+    icon: '<img src="/assets/images/grafokett/logo.webp"  loading="lazy" alt="Grafokett logo"/>',
     iconOpacity: 0.75,
     content: [
       {
         title: 'The Product',
-        img: '/assets/grafokett/1.webp',
+        img: '/assets/images/grafokett/1.webp',
+        alt: 'A cutout showing cloud label ui',
         content: [
           'Cloudlabel is a cloud-based label management software',
           'The software makes it easy to generate barcodes as well as design, manage, and print labels',
@@ -428,7 +438,8 @@ export const cases: Case[] = [
       },
       {
         title: 'My role',
-        img: '/assets/grafokett/2.webp',
+        img: '/assets/images/grafokett/2.webp',
+        alt: 'A person putting labels on packages in a warehouse',
         content: [
           'I had the role of lead frontend developer',
           'I built all components in isolation from the system in storybook',
@@ -456,7 +467,7 @@ export const cases: Case[] = [
     name: 'Studio Ekberg',
     technologies: ['VueJS', 'Javascript', 'HTML5', 'CSS3'],
     year: 2019,
-    icon: '<img src="/assets/studio ekberg/logo.webp"  loading="lazy" alt="Studio Ekberg"/>',
+    icon: '<img src="/assets/images/studio ekberg/logo.webp"  loading="lazy" alt="Studio Ekberg"/>',
     iconOpacity: 0.5,
     content: [],
     description:

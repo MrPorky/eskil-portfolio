@@ -5,7 +5,7 @@ import path from 'path';
 const resizeTo = async (
   fromPath: string,
   toPath: string,
-  targetWidth: number
+  targetWidth: number,
 ) => {
   const dir = path.dirname(toPath);
   await fs.mkdirSync(dir, { recursive: true });
@@ -31,54 +31,74 @@ const resizeTo = async (
 };
 
 await fs.mkdirSync('./images/tmp', { recursive: true });
-await resizeTo('./images/profilbild.jpg', './src/assets/profilbild.webp', 400);
+await resizeTo(
+  './images/profilbild.jpg',
+  './src/assets/images/profilbild.webp',
+  400,
+);
 
-await resizeTo('./images/yara/1.png', './src/assets/yara/1.webp', 300);
-await resizeTo('./images/yara/2.jpeg', './src/assets/yara/2.webp', 400);
+await resizeTo('./images/yara/1.png', './src/assets/images/yara/1.webp', 300);
+await resizeTo('./images/yara/2.jpeg', './src/assets/images/yara/2.webp', 400);
 
-await resizeTo('./images/volvo/1.avif', './src/assets/volvo/1.webp', 400);
-await resizeTo('./images/volvo/2.avif', './src/assets/volvo/2.webp', 400);
+await resizeTo(
+  './images/volvo/1.avif',
+  './src/assets/images/volvo/1.webp',
+  400,
+);
+await resizeTo(
+  './images/volvo/2.avif',
+  './src/assets/images/volvo/2.webp',
+  400,
+);
 
-await resizeTo('./images/osstell/1.jpg', './src/assets/osstell/1.webp', 350);
-await resizeTo('./images/osstell/2.png', './src/assets/osstell/2.webp', 400);
+await resizeTo(
+  './images/osstell/1.jpg',
+  './src/assets/images/osstell/1.webp',
+  350,
+);
+await resizeTo(
+  './images/osstell/2.png',
+  './src/assets/images/osstell/2.webp',
+  400,
+);
 
 await resizeTo(
   './images/guardtools/1.webp',
-  './src/assets/guardtools/1.webp',
-  400
+  './src/assets/images/guardtools/1.webp',
+  400,
 );
 await resizeTo(
   './images/guardtools/2.webp',
-  './src/assets/guardtools/2.webp',
-  400
+  './src/assets/images/guardtools/2.webp',
+  400,
 );
 
 await resizeTo(
   './images/happy faces/logo.png',
-  './src/assets/happy faces/logo.webp',
-  250
+  './src/assets/images/happy faces/logo.webp',
+  250,
 );
 
 await resizeTo(
   './images/grafokett/logo.png',
-  './src/assets/grafokett/logo.webp',
-  250
+  './src/assets/images/grafokett/logo.webp',
+  250,
 );
 await resizeTo(
   './images/grafokett/1.png',
-  './src/assets/grafokett/1.webp',
-  400
+  './src/assets/images/grafokett/1.webp',
+  400,
 );
 await resizeTo(
   './images/grafokett/2.jpg',
-  './src/assets/grafokett/2.webp',
-  400
+  './src/assets/images/grafokett/2.webp',
+  400,
 );
 
 await resizeTo(
   './images/studio ekberg/logo.png',
-  './src/assets/studio ekberg/logo.webp',
-  250
+  './src/assets/images/studio ekberg/logo.webp',
+  250,
 );
 
 sharp.cache(false);

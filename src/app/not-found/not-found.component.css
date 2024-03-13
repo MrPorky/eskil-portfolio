@@ -1,0 +1,16 @@
+section {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: var(--space-md);
+}
+
+h1 {
+  font-size: max(var(--text-xxxl), 20vw);
+}
+
+p {
+  font-size: max(var(--text-sm), 2vw);
+}
