@@ -1,9 +1,4 @@
-[build]
-command = "pnpm run netlify"
-publish = "dist/eskil-portfolio/browser"
-
 [context.production]
-command = ""
 publish = "dist/eskil-portfolio/browser"
 
 [[redirects]]
