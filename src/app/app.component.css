@@ -38,6 +38,7 @@ header a:hover {
 
 a {
   position: fixed;
-  top: var(--space-md);
-  left: var(--space-md);
+  top: var(--space-sm);
+  left: var(--space-sm);
+  z-index: 1000;
 }
