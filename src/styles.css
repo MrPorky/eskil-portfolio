@@ -291,6 +291,8 @@ section {
 }
 
 img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
   object-fit: contain;
   object-position: center;
 }
