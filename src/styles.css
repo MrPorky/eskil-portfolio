@@ -78,6 +78,9 @@ button {
   --surface: rgba(var(--primary-values), 0.05);
   --border: rgba(var(--primary-values), 0.15);
 
+  --box-shadow: 0px 5px 10px rgba(var(--primary-values), 0.05);
+  --box-shadow-hover: 0px 5px 15px rgba(var(--primary-values), 0.15);
+
   --mobile-breakpoint: 600px;
 
   background-color: var(--base);

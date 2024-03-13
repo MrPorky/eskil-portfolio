@@ -1,44 +1,16 @@
-.app {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100%;
+:host {
+  display: contents;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  border-bottom: 1px solid var(--border);
-  background-color: var(--base);
-  color: var(--neutral);
-  padding: 0.25rem 1rem;
-  display: flex;
-  z-index: 1000;
-}
-
-header > div {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-header a {
-  all: unset;
-  cursor: pointer;
-  color: var(--neutral);
-  border-bottom: 1px solid currentColor;
-  transition: 200ms color;
-}
-
-header a:hover {
-  color: var(--primary);
-}
-
-a {
+a.logo {
   position: fixed;
   top: var(--space-sm);
   left: var(--space-sm);
   z-index: 1000;
+}
+
+footer {
+  padding: var(--space-md);
+  display: grid;
+  gap: var(--space-sm);
 }
