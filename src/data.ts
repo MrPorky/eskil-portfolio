@@ -364,7 +364,8 @@ export const cases: Case[] = [
     icon: icons.ericsson,
     iconOpacity: 0.5,
     content: [],
-    description: 'Confidential programming information for Ericsson.',
+    description:
+      'At Ericsson I worked in a small team where we maintained and implemented new features in one of their products which is under Confidential information. At the time we were working on their old client I took lead in bringing up a new client built in react and using ericssons design system. During this i helpt and worked together with the backend.',
   },
   {
     employment: 'QueensLab',

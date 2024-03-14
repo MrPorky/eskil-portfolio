@@ -20,7 +20,8 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(var(--primary-values), 0.05);
+  background-color: rgba(var(--primary-values), 0.1);
   border-radius: 5px;
   filter: blur(var(--space-sm));
+  z-index: -1;
 }

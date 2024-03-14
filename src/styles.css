@@ -125,8 +125,6 @@ html,
 body {
   margin: 0px;
   padding: 0px;
-  min-height: 100vh;
-  min-height: 100lvh;
   display: contents;
   scroll-padding-top: 1rem;
 }
