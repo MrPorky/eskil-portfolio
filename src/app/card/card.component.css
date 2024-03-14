@@ -55,13 +55,7 @@
   display: grid;
   place-content: center;
   position: relative;
-  border-radius: calc(var(--header-height) / 2) 0 0
-    calc(var(--header-height) / 2);
-  font-weight: 600;
-}
-
-i {
-  text-align: end;
+  border-radius: 100vw 0 0 100vw;
 }
 
 .date::before {
