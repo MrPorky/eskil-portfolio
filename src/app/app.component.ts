@@ -30,11 +30,17 @@ export class AppComponent {
 
     this.window = doc.defaultView;
 
+    const root = doc.querySelector(':root');
+    if (!root) return;
+
+    if (root instanceof HTMLElement) {
+      root.style.setProperty('--vh', `${root.clientHeight / 100}px`);
+    }
+
     if (
       this.window?.matchMedia &&
       this.window.matchMedia('(prefers-reduced-motion: no-preference)').matches
     ) {
-      const root = doc.querySelector(':root');
       if (root && root instanceof HTMLElement)
         root.style.scrollBehavior = 'smooth';
     }
