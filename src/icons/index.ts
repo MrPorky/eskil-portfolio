@@ -38,6 +38,7 @@ import raybased from './Raybased_Logo.svg';
 import zooma from './zooma-logo.svg';
 import queenslab from './QL logo.svg';
 import aareon from './Aareon Nordic.svg';
+import eg from './Eg.svg';
 
 export const skills = {
   angular,
@@ -93,4 +94,5 @@ export default {
   ...skills,
   ...compamies,
   ...media,
+  eg,
 };

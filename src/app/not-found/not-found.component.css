@@ -1,10 +1,9 @@
 section {
-  position: fixed;
-  inset: 0;
   display: grid;
   place-content: center;
   text-align: center;
   padding: var(--space-md);
+  height: 100%;
 }
 
 h1 {

@@ -238,12 +238,6 @@ button:hover {
   grid-column: full-width;
 }
 
-section {
-  position: relative;
-  min-height: 100vh;
-  min-height: 100lvh;
-}
-
 .row {
   display: flex;
   gap: var(--space-md);

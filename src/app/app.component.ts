@@ -4,7 +4,7 @@ import { DOCUMENT } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { SafeHtml } from '@angular/platform-browser';
-import { media } from '../icons';
+import icons from '../icons';
 
 @Component({
   selector: 'app-root',
@@ -16,15 +16,17 @@ import { media } from '../icons';
 export class AppComponent {
   window: Document['defaultView'] = null;
 
-  github: SafeHtml = media.github;
-  linkedin: SafeHtml = media.linkedin;
+  github: SafeHtml = icons.github;
+  linkedin: SafeHtml = icons.linkedin;
+  eg: SafeHtml = icons.eg;
 
   constructor(
     private sanitizer: DomSanitizer,
     @Inject(DOCUMENT) doc: Document
   ) {
-    this.github = this.sanitizer.bypassSecurityTrustHtml(media.github);
-    this.linkedin = this.sanitizer.bypassSecurityTrustHtml(media.linkedin);
+    this.github = this.sanitizer.bypassSecurityTrustHtml(icons.github);
+    this.linkedin = this.sanitizer.bypassSecurityTrustHtml(icons.linkedin);
+    this.eg = this.sanitizer.bypassSecurityTrustHtml(icons.eg);
 
     this.window = doc.defaultView;
 

@@ -1,5 +1,8 @@
 :host {
-  display: contents;
+  display: grid;
+  min-height: 100vh;
+  min-height: 100lvh;
+  grid-template-rows: 1fr min-content;
 }
 
 a.logo {
@@ -7,10 +10,13 @@ a.logo {
   top: var(--space-sm);
   left: var(--space-sm);
   z-index: 1000;
+  width: 3rem;
+  height: 3rem;
 }
 
 footer {
   padding: var(--space-md);
   display: grid;
   gap: var(--space-sm);
+  place-items: center;
 }

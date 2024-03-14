@@ -5,6 +5,7 @@ section {
   gap: var(--space-xxl);
   padding-bottom: 80px;
   padding-top: var(--space-lg);
+  height: 100lvh;
 }
 
 @media screen and (max-width: 600px) {
