@@ -8,5 +8,6 @@ img {
 }
 
 #cases {
+  padding-block-start: 4rem;
   row-gap: var(--space-xl);
 }
