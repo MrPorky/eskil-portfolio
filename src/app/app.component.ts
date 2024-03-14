@@ -33,7 +33,7 @@ export class AppComponent {
     const root = doc.querySelector(':root');
     if (!root) return;
 
-    if (root instanceof HTMLElement) {
+    if (root instanceof HTMLElement && !Number.isNaN(root.clientHeight / 100)) {
       root.style.setProperty('--vh', `${root.clientHeight / 100}px`);
     }
 

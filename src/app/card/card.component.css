@@ -50,19 +50,14 @@
 
 .date {
   height: var(--header-height);
-  background-color: var(--primary);
-  color: var(--base);
+  background-color: var(--secondary);
+  color: var(--neutral);
   display: grid;
   place-content: center;
   position: relative;
   border-radius: calc(var(--header-height) / 2) 0 0
     calc(var(--header-height) / 2);
-  box-shadow: var(--box-shadow);
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.link:hover .date {
-  box-shadow: var(--box-shadow-hover);
+  font-weight: 600;
 }
 
 i {
@@ -73,7 +68,7 @@ i {
   content: "";
   width: calc(var(--header-height) / 2);
   aspect-ratio: 1;
-  background: var(--primary);
+  background: var(--secondary);
   background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
   position: absolute;
   top: 100%;
@@ -85,21 +80,12 @@ i {
   position: relative;
   padding: calc(var(--header-height) / 2);
   margin-inline: calc(var(--header-height) / 2);
-  border: 1px solid var(--border);
-  background-color: rgba(var(--primary-values), 0.05);
-  box-shadow: var(--box-shadow);
-  transition-property: box-shadow, background-color;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
+  border: 1px solid var(--secondary);
+  background-color: rgba(var(--secondary-values), 0.5);
 }
 
 .descr > .column {
   gap: 0.2rem;
-}
-
-.link:hover .descr {
-  background-color: rgba(var(--primary-values), 0.1);
-  box-shadow: var(--box-shadow-hover);
 }
 
 @media (min-width: 770px) {

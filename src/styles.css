@@ -30,6 +30,7 @@ button {
 
     --base-values: 25, 25, 25;
     --primary-values: 219, 127, 142;
+    --secondary-values: 35, 35, 35;
     --neutral-values: 230, 230, 230;
   }
 }
@@ -39,6 +40,7 @@ button {
 
   --base-values: 25, 25, 25;
   --primary-values: 219, 127, 142;
+  --secondary-values: 35, 35, 35;
   --neutral-values: 230, 230, 230;
 }
 
@@ -49,6 +51,7 @@ button {
 
     --base-values: 230, 230, 230;
     --primary-values: 206, 80, 101;
+    --secondary-values: 220, 220, 220;
     --neutral-values: 25, 25, 25;
   }
 }
@@ -58,6 +61,7 @@ button {
 
   --base-values: 230, 230, 230;
   --primary-values: 206, 80, 101;
+  --secondary-values: 220, 220, 220;
   --neutral-values: 25, 25, 25;
 }
 
@@ -70,6 +74,7 @@ button {
   --base: rgb(var(--base-values));
   --primary: rgb(var(--primary-values));
   --primary-hover: rgba(var(--primary-values), 0.8);
+  --secondary: rgb(var(--secondary-values));
   --neutral: rgb(var(--neutral-values));
 
   --text: rgba(var(--neutral-values), 0.8);
@@ -180,19 +185,23 @@ body {
   );
 }
 
-button {
+button,
+.button {
   all: unset;
-  padding: 0.25rem;
-  border-radius: 50%;
+  padding: var(--space-xs);
+  text-align: center;
+  border-radius: 100vw;
   cursor: pointer;
   background-color: var(--primary);
-  color: var(--neutral);
+  color: var(--base);
   fill: var(--neutral);
+  font-weight: 600;
   transition-duration: 200ms;
   transition-property: color, background-color, fill, stroke;
 }
 
-button:hover {
+button:hover,
+.button:hover {
   background-color: var(--primary-hover);
   color: var(--text);
   fill: var(--text);
@@ -333,7 +342,7 @@ div {
   top: 0;
   z-index: -1;
   filter: grayscale(1) invert(65%) contrast(100%);
-  opacity: 0.6;
+  opacity: 0.05;
 }
 
 @media (min-width: 600px) {

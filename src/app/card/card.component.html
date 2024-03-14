@@ -2,30 +2,23 @@
   <span class="dot"></span>
   <span class="connector"></span>
 </div>
-<div class="content" [class.link]="case.link !== undefined">
-  <ng-template #greet>
-    <div class="date">{{ case.year }}</div>
-    <div class="descr column">
-      <div class="column">
-        <h3>{{ case.name }}</h3>
-        <i>at {{ case.employment }}</i>
-      </div>
-      <p>{{ case.description }}</p>
-
-      @if (icon){
-      <div
-        class="icon fade"
-        [style.--iconopacity]="case.iconOpacity"
-        [innerHTML]="icon"
-      ></div>
-      }
+<div class="content">
+  <div class="date">{{ case.year }}</div>
+  <div class="descr column">
+    <div class="column">
+      <h3>{{ case.name }}</h3>
+      <i>at {{ case.employment }}</i>
     </div>
-  </ng-template>
-  @if (case.link) {
-  <a href="{{ case.link }}">
-    <ng-container *ngTemplateOutlet="greet"></ng-container>
-  </a>
-  } @else {
-  <ng-container *ngTemplateOutlet="greet"></ng-container>
-  }
+    <p>{{ case.description }}</p>
+
+    @if (case.link) {
+    <a class="button" href="{{ case.link }}"> View Case </a>
+    } @if (icon){
+    <div
+      class="icon fade"
+      [style.--iconopacity]="case.iconOpacity"
+      [innerHTML]="icon"
+    ></div>
+    }
+  </div>
 </div>
