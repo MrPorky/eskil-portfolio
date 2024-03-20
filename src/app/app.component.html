@@ -1,5 +1,30 @@
-<main>
+<header>
   <a class="logo icon" href="/" aria-label="Home" [innerHTML]="eg"> </a>
+
+  <nav role="navigation" aria-label="Main menu">
+    <button
+      [attr.aria-expanded]="open"
+      aria-controls="main-menu"
+      aria-label="Menu"
+      aria-controls="main-menu"
+      class="menu"
+      (click)="toggle()"
+    >
+      <div focusable="false" class="hamburger" [class.open]="open">
+        <span></span><span></span>
+      </div>
+    </button>
+    <div id="main-menu" [class.visible]="open">
+      <ul class="column">
+        <a>test</a>
+        <a>test</a>
+        <a>test</a>
+        <a>test</a>
+      </ul>
+    </div>
+  </nav>
+</header>
+<main>
   <router-outlet />
 </main>
 <footer>

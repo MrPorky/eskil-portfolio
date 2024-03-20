@@ -1,5 +1,7 @@
 /fleet-analytics
 /customer-connect
 /osstell-connect
+/emerson
+/ericsson
 /blue-mobile-systems
 /grafokett

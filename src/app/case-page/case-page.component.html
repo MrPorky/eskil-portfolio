@@ -29,5 +29,30 @@
       </div>
     </div>
     }
+    <nav class="nav-wide-wrapper" aria-label="Page navigation">
+      @if (data.prev) {
+      <a
+        href="{{ data.prev }}"
+        class="nav-chapters previous icon currentColorStroke"
+        style="--size: 5rem"
+        title="Previous case"
+        aria-label="Previous case"
+        aria-keyshortcuts="Left"
+        [innerHTML]="chevron_left"
+      >
+      </a>
+      } @if (data.next) {
+      <a
+        href="{{ data.next }}"
+        class="nav-chapters next icon currentColorStroke"
+        style="--size: 5rem"
+        title="Next case"
+        aria-label="Next case"
+        aria-keyshortcuts="Right"
+        [innerHTML]="chevron_left"
+      >
+      </a>
+      }
+    </nav>
   </div>
 </div>

@@ -4,13 +4,71 @@
   grid-template-rows: 1fr min-content;
 }
 
-a.logo {
+header {
   position: fixed;
-  top: var(--space-sm, 0.75rem);
-  left: var(--space-sm, 0.75rem);
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: var(--space-sm, 0.75rem);
+  height: 3rem;
   z-index: 1000;
+}
+
+a.logo {
+  width: 3rem;
+}
+
+.menu {
+  display: grid;
+  place-content: center;
+  box-sizing: border-box;
   width: 3rem;
   height: 3rem;
+}
+
+.hamburger {
+  --size: 1.5rem;
+  --thickness: 2px;
+
+  position: relative;
+  height: var(--size);
+  width: var(--size);
+}
+
+.hamburger span:first-of-type {
+  top: calc(var(--size) * 0.25 - var(--thickness) * 0.5);
+}
+
+.hamburger span:last-of-type {
+  bottom: calc(var(--size) * 0.25 - var(--thickness) * 0.5);
+}
+
+.hamburger span {
+  background-color: var(--text);
+  display: block;
+  height: var(--thickness);
+  width: var(--size);
+  position: absolute;
+
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    top 0.2s cubic-bezier(0.3, 1.4, 0.7, 1) 0.2s,
+    bottom 0.2s cubic-bezier(0.3, 1.4, 0.7, 1) 0.2s;
+}
+
+.hamburger.open span:first-of-type {
+  top: calc(var(--size) * 0.5 - var(--thickness) * 0.5);
+  transform: rotate(45deg);
+}
+
+.hamburger.open span:last-of-type {
+  bottom: calc(var(--size) * 0.5 - var(--thickness) * 0.5);
+  transform: rotate(-45deg);
+}
+
+.hamburger.open span {
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s,
+    top 0.2s cubic-bezier(0.3, 1.4, 0.7, 1),
+    bottom 0.2s cubic-bezier(0.3, 1.4, 0.7, 1);
 }
 
 footer {
@@ -18,4 +76,22 @@ footer {
   display: grid;
   gap: var(--space-sm);
   place-items: center;
+}
+
+#main-menu {
+  background-color: var(--primary);
+  color: var(--base);
+
+  position: fixed;
+  flex-direction: column;
+  display: grid;
+  place-items: center;
+  top: 0rem;
+  right: 0rem;
+  width: 100%;
+  height: 100%;
+}
+
+.visible.visible {
+  visibility: visible;
 }

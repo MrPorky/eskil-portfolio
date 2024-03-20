@@ -2,6 +2,19 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Case, cases } from '../../data';
 import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { extra } from '../../icons';
+
+const links = cases
+  .map((item) => item.link)
+  .filter((item) => item !== undefined);
+const getAjesentLinks = (c: Case): CasePage => {
+  const index = links.indexOf(c.link);
+  const next = links[index + 1];
+  const prev = links[index - 1];
+  return { ...c, next, prev };
+};
+
+type CasePage = Case & { next?: string; prev?: string };
 
 @Component({
   selector: 'app-case-page',
@@ -11,17 +24,30 @@ import { Router } from '@angular/router';
   styleUrl: './case-page.component.css',
 })
 export class CasePageComponent implements OnInit {
-  data!: Case;
+  data!: CasePage;
 
   @Input()
   set id(caseId: string) {
-    const caseItem = cases.find((item) => item.link === `/${caseId}`);
+    const caseIndex = cases.findIndex((item) => item.link === `/${caseId}`);
 
-    if (!caseItem) {
+    if (caseIndex === -1) {
       this.router.navigateByUrl('404', { skipLocationChange: true });
       return;
     }
-    this.data = caseItem;
+
+    const indexMap = cases.reduce<Record<number, number>>(
+      (acc, curr, index) => {
+        if (curr.link) {
+          acc[index] = index;
+        }
+
+        return acc;
+      },
+      {}
+    );
+
+    const caseItem = cases[caseIndex];
+    this.data = getAjesentLinks(caseItem);
   }
 
   isArray(obj: any) {
@@ -29,8 +55,13 @@ export class CasePageComponent implements OnInit {
   }
 
   svg: SafeHtml = '';
+  chevron_left: SafeHtml = '';
 
-  constructor(private sanitizer: DomSanitizer, private router: Router) {}
+  constructor(private sanitizer: DomSanitizer, private router: Router) {
+    this.chevron_left = this.sanitizer.bypassSecurityTrustHtml(
+      extra.chevron_left
+    );
+  }
 
   ngOnInit() {
     if (this.data.icon)

@@ -14,6 +14,8 @@ import icons from '../icons';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  open: boolean = true;
+
   window: Document['defaultView'] = null;
 
   github: SafeHtml = icons.github;
@@ -44,6 +46,10 @@ export class AppComponent {
       if (root && root instanceof HTMLElement)
         root.style.scrollBehavior = 'smooth';
     }
+  }
+
+  toggle() {
+    this.open = !this.open;
   }
 
   title = 'eskil-portfolio';

@@ -349,9 +349,25 @@ export const cases: Case[] = [
     name: 'Emerson',
     technologies: ['VueJS', 'Azure Devops'],
     year: 2021,
+    link: '/emerson',
     icon: icons.emerson,
     iconOpacity: 0.7,
-    content: [],
+    content: [
+      {
+        title: 'The Product',
+        img: '/assets/images/emerson/1.webp',
+        alt: 'Lights and a factory',
+        content: [
+          'Emerson is an IoT company that provides industrial automation solutions and industrial control systems for the energy industry.',
+        ],
+      },
+      {
+        title: 'My role',
+        img: '/assets/images/emerson/2.webp',
+        alt: 'Blurprints and gauges of pipes in a factory',
+        content: ['My role at Emerson included:', 'Lead frontend developer'],
+      },
+    ],
     description:
       'Emerson is a large corporation and one area of focus is delivering an IoT system for a large industry. There is two development team, with an total amount of 20+ developers and tester and is a mixture of nationalities, experience and background. I had responsibilities throughout the entire stack with a primary focus on frontend development and test environment.',
   },
@@ -361,9 +377,25 @@ export const cases: Case[] = [
     name: 'Ericsson',
     technologies: ['.NET', 'React', 'Javascript', 'Typescript'],
     year: 2020,
+    link: '/ericsson',
     icon: icons.ericsson,
     iconOpacity: 0.5,
-    content: [],
+    content: [
+      {
+        title: 'The Product',
+        img: '/assets/images/ericsson/1.webp',
+        alt: 'A woman working with a ericsson system on lots of screens',
+        content: [
+          'Ericsson is a global provider of telecommunications services and solutions.',
+        ],
+      },
+      {
+        title: 'My role',
+        img: '/assets/images/ericsson/2.webp',
+        alt: 'Ericsson building in borås',
+        content: ['My role at Ericsson included:', 'Lead frontend developer'],
+      },
+    ],
     description:
       'At Ericsson I worked in a small team where we maintained and implemented new features in one of their products which is under Confidential information. At the time we were working on their old client I took lead in bringing up a new client built in react and using ericssons design system. During this i helpt and worked together with the backend.',
   },

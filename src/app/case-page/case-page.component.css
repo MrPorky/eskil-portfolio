@@ -40,3 +40,46 @@ img {
     align-items: start;
   }
 }
+
+.nav-chapters {
+  font-size: var(--text-xxl);
+  text-align: center;
+  text-decoration: none;
+  color: rgba(var(--neutral-values), 0.25);
+
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  width: 90px;
+
+  display: grid;
+  place-items: center;
+
+  background-color: rgba(var(--secondary-values), 0.4);
+  transition-property: color;
+  transition-duration: 0.5s;
+  border-radius: 1rem;
+}
+
+.nav-chapters:hover {
+  text-decoration: none;
+  color: var(--text-2);
+}
+
+.previous {
+  float: left;
+  left: 0;
+}
+
+.next {
+  float: right;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+@media (min-width: 950px) {
+  .nav-chapters {
+    background: none;
+    position: fixed;
+  }
+}

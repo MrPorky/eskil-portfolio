@@ -5,7 +5,7 @@ import path from 'path';
 const resizeTo = async (
   fromPath: string,
   toPath: string,
-  targetWidth: number,
+  targetWidth: number
 ) => {
   const dir = path.dirname(toPath);
   await fs.mkdirSync(dir, { recursive: true });
@@ -34,7 +34,7 @@ await fs.mkdirSync('./images/tmp', { recursive: true });
 await resizeTo(
   './images/profilbild.jpg',
   './src/assets/images/profilbild.webp',
-  400,
+  400
 );
 
 await resizeTo('./images/yara/1.png', './src/assets/images/yara/1.webp', 300);
@@ -43,62 +43,84 @@ await resizeTo('./images/yara/2.jpeg', './src/assets/images/yara/2.webp', 400);
 await resizeTo(
   './images/volvo/1.avif',
   './src/assets/images/volvo/1.webp',
-  400,
+  400
 );
 await resizeTo(
   './images/volvo/2.avif',
   './src/assets/images/volvo/2.webp',
-  400,
+  400
 );
 
 await resizeTo(
   './images/osstell/1.jpg',
   './src/assets/images/osstell/1.webp',
-  350,
+  350
 );
 await resizeTo(
   './images/osstell/2.png',
   './src/assets/images/osstell/2.webp',
-  400,
+  400
 );
 
 await resizeTo(
   './images/guardtools/1.webp',
   './src/assets/images/guardtools/1.webp',
-  400,
+  400
 );
 await resizeTo(
   './images/guardtools/2.webp',
   './src/assets/images/guardtools/2.webp',
-  400,
+  400
 );
 
 await resizeTo(
   './images/happy faces/logo.png',
   './src/assets/images/happy faces/logo.webp',
-  250,
+  250
 );
 
 await resizeTo(
   './images/grafokett/logo.png',
   './src/assets/images/grafokett/logo.webp',
-  250,
+  250
 );
 await resizeTo(
   './images/grafokett/1.png',
   './src/assets/images/grafokett/1.webp',
-  400,
+  400
 );
 await resizeTo(
   './images/grafokett/2.jpg',
   './src/assets/images/grafokett/2.webp',
-  400,
+  400
 );
 
 await resizeTo(
   './images/studio ekberg/logo.png',
   './src/assets/images/studio ekberg/logo.webp',
-  250,
+  250
+);
+
+await resizeTo(
+  './images/emerson/1.jpg',
+  './src/assets/images/emerson/1.webp',
+  250
+);
+await resizeTo(
+  './images/emerson/2.jpg',
+  './src/assets/images/emerson/2.webp',
+  250
+);
+
+await resizeTo(
+  './images/ericsson/1.jpg',
+  './src/assets/images/ericsson/1.webp',
+  250
+);
+await resizeTo(
+  './images/ericsson/2.jpg',
+  './src/assets/images/ericsson/2.webp',
+  250
 );
 
 sharp.cache(false);

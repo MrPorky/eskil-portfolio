@@ -39,6 +39,7 @@ import zooma from './zooma-logo.svg';
 import queenslab from './QL logo.svg';
 import aareon from './Aareon Nordic.svg';
 import eg from './Eg.svg';
+import chevron_left from './chevron-left.svg';
 
 export const skills = {
   angular,
@@ -90,9 +91,14 @@ export const media = {
   github,
 };
 
+export const extra = {
+  eg,
+  chevron_left,
+};
+
 export default {
   ...skills,
   ...compamies,
   ...media,
-  eg,
+  ...extra,
 };
