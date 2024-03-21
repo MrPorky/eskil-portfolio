@@ -1,0 +1,23 @@
+<nav role="navigation" aria-label="Main menu">
+  <button
+    [attr.aria-expanded]="open"
+    aria-controls="main-menu"
+    aria-label="Menu"
+    aria-controls="main-menu"
+    class="menu"
+    (click)="toggle()"
+  >
+    <div focusable="false" class="hamburger" [class.open]="open">
+      <span></span><span></span>
+    </div>
+  </button>
+
+  <div id="main-menu" [class.visible]="open">
+    <ul class="column">
+      <a href="/test">test</a>
+      <a href="/test">test</a>
+      <a href="/test">test</a>
+      <a href="/test">test</a>
+    </ul>
+  </div>
+</nav>

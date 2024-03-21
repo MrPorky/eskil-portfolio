@@ -5,17 +5,16 @@ import { RouterOutlet } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { SafeHtml } from '@angular/platform-browser';
 import icons from '../icons';
+import { NavComponent } from './nav/nav.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NavComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  open: boolean = true;
-
   window: Document['defaultView'] = null;
 
   github: SafeHtml = icons.github;
@@ -37,6 +36,10 @@ export class AppComponent {
 
     if (root instanceof HTMLElement && !Number.isNaN(root.clientHeight / 100)) {
       root.style.setProperty('--vh', `${root.clientHeight / 100}px`);
+
+      this.window?.addEventListener('resize', () => {
+        root.style.setProperty('--vh', `${root.clientHeight / 100}px`);
+      });
     }
 
     if (
@@ -46,10 +49,6 @@ export class AppComponent {
       if (root && root instanceof HTMLElement)
         root.style.scrollBehavior = 'smooth';
     }
-  }
-
-  toggle() {
-    this.open = !this.open;
   }
 
   title = 'eskil-portfolio';
