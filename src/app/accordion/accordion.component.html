@@ -1,0 +1,23 @@
+<h3>
+  <button
+    [id]="triggerId"
+    [attr.aria-expanded]="open"
+    [attr.aria-controls]="panelId"
+    class="accordion-trigger"
+    (click)="toggle()"
+  >
+    <div class="icon" style="--size: 1.25em" [innerHTML]="icon"></div>
+    {{ title }}
+  </button>
+</h3>
+<div
+  [id]="panelId"
+  [attr.aria-labelledby]="triggerId"
+  role="region"
+  class="accordion-panel"
+  [class.visible]="open"
+>
+  <div>
+    <ng-content></ng-content>
+  </div>
+</div>

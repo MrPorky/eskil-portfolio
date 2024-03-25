@@ -1,0 +1,44 @@
+h3 {
+  all: unset;
+}
+
+.accordion-trigger {
+  background-color: var(--secondary);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-weight: normal;
+  margin: 0;
+  padding: 1em 1.5em;
+  text-align: start;
+  width: 100%;
+}
+
+.accordion-trigger:focus,
+.accordion-trigger:hover {
+  background-color: rgba(var(--primary-values), 0.2);
+}
+
+button {
+  border-radius: 0;
+}
+
+.accordion-panel {
+  display: grid;
+  visibility: hidden;
+  grid-template-rows: 0fr;
+  transition: 300ms;
+  border: 1px solid var(--secondary);
+  background-color: rgba(var(--secondary-values), 0.5);
+  padding: 0em 1.5em;
+}
+
+.accordion-panel > * {
+  overflow: hidden;
+}
+
+.accordion-panel.visible {
+  visibility: visible;
+  grid-template-rows: 1fr;
+}

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { HamburgerComponent } from '../hamburger/hamburger.component';
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [],
+  imports: [HamburgerComponent],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css',
 })

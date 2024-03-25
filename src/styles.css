@@ -2,7 +2,6 @@
 *:not(head, style, script, svg, svg *, ul, li),
 *::before,
 *::after {
-  all: unset;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -10,6 +9,15 @@
   font-style: normal;
   font-variation-settings: "slnt" 0;
   color: var(--text-1);
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--neutral) !important;
+  outline-offset: 2px !important;
 }
 
 ul {

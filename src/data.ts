@@ -543,3 +543,30 @@ export const cases: Case[] = [
       'I contributed to the core functionality of an application, collaborating closely with other teams and supporting departments to ensure smooth operation and timely issue resolution.',
   },
 ];
+
+export type Skill = {
+  name: string;
+  description: string[];
+  icon: string;
+};
+
+export const skills: Skill[] = [
+  {
+    name: 'JavaScript',
+    description: ['I have great experience with JavaScript and its ecosystem'],
+    icon: icons.js,
+  },
+  {
+    name: 'TypeScript',
+    description: ['I have great experience with TypeScript and its ecosystem'],
+    icon: icons.ts,
+  },
+  {
+    name: 'React',
+    description: [
+      'I have great experience with React and its ecosystem',
+      'I have great experience with React and its ecosystem',
+    ],
+    icon: icons.react,
+  },
+];

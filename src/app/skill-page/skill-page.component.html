@@ -1,0 +1,13 @@
+<div class="page full-width content-grid">
+  <div>
+    @for ( skill of skills; track skills) {
+    <app-accordion [title]="skill.name" [icon]="skill.icon">
+      @for ( value of skill.description; track skills) {
+      <p>
+        {{ value }}
+      </p>
+      }
+    </app-accordion>
+    }
+  </div>
+</div>

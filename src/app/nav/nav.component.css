@@ -12,53 +12,6 @@
   height: var(--menu-size);
 }
 
-.hamburger {
-  --hamburger-size: 1.5rem;
-  --hamburger-thickness: 2px;
-
-  position: absolute;
-  top: calc(var(--menu-size) * 0.5 + var(--space-sm, 0.75rem));
-  right: calc(var(--menu-size) * 0.5 + var(--space-sm, 0.75rem));
-  height: var(--hamburger-size);
-  width: var(--hamburger-size);
-}
-
-.hamburger span:first-of-type {
-  top: calc(var(--hamburger-size) * 0.25 - var(--hamburger-thickness) * 0.5);
-}
-
-.hamburger span:last-of-type {
-  bottom: calc(var(--hamburger-size) * 0.25 - var(--hamburger-thickness) * 0.5);
-}
-
-.hamburger span {
-  background-color: var(--text);
-  display: block;
-  height: var(--hamburger-thickness);
-  width: var(--hamburger-size);
-  position: absolute;
-
-  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    top 0.2s cubic-bezier(0.3, 1.4, 0.7, 1) 0.2s,
-    bottom 0.2s cubic-bezier(0.3, 1.4, 0.7, 1) 0.2s;
-}
-
-.hamburger.open span:first-of-type {
-  top: calc(var(--hamburger-size) * 0.5 - var(--hamburger-thickness) * 0.5);
-  transform: rotate(45deg);
-}
-
-.hamburger.open span:last-of-type {
-  bottom: calc(var(--hamburger-size) * 0.5 - var(--hamburger-thickness) * 0.5);
-  transform: rotate(-45deg);
-}
-
-.hamburger.open span {
-  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s,
-    top 0.2s cubic-bezier(0.3, 1.4, 0.7, 1),
-    bottom 0.2s cubic-bezier(0.3, 1.4, 0.7, 1);
-}
-
 #main-menu,
 #main-menu::before,
 #main-menu ul {
