@@ -61,3 +61,11 @@
   transition: clip-path var(--time) 0.1s;
   clip-path: circle(160% at top right);
 }
+
+@media (prefers-reduced-motion) {
+  #main-menu,
+  #main-menu::before,
+  #main-menu ul {
+    transition: none !important;
+  }
+}

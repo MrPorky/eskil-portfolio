@@ -40,6 +40,7 @@ import queenslab from './QL logo.svg';
 import aareon from './Aareon Nordic.svg';
 import eg from './Eg.svg';
 import chevron_left from './chevron-left.svg';
+import git from './git.svg';
 
 export const skills = {
   angular,
@@ -71,6 +72,7 @@ export const skills = {
   vite,
   vitest,
   vue,
+  git,
 };
 
 export const compamies = {

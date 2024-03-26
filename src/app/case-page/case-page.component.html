@@ -8,6 +8,7 @@
       class="icon fade"
       [style.--iconopacity]="data.iconOpacity"
       [innerHTML]="svg"
+      aria-hidden="true"
     ></div>
   </div>
   <div class="divider breakout"></div>
@@ -15,7 +16,7 @@
     @for (c of data.content; track data; let i = $index;) {
     <div class="row md {{ i % 2 === 0 ? '' : 'reverse' }}">
       <img src="{{ c.img }}" alt="{{ c.alt }}" />
-      <div class="column">
+      <div class="column content">
         <h3>{{ c.title }}</h3>
         @for (p of c.content; track data) { @if ( isArray( p)) {
         <ul>

@@ -77,6 +77,10 @@ img {
   transform: rotate(180deg);
 }
 
+.content {
+  width: 100%;
+}
+
 @media (min-width: 950px) {
   .nav-chapters {
     background: none;

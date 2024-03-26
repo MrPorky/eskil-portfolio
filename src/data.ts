@@ -1,201 +1,4 @@
-export const technologies = [
-  'Javascript',
-  'Typescript',
-  'React',
-  'NextJS',
-  'Storybook',
-  'NodeJs',
-  'Express',
-  'Svelte, Sveltekit',
-  'Azure Devops',
-  'Unity',
-  'Cypress',
-  'Rust',
-  'SolidJs',
-  'Vitest',
-  'Playwright',
-  'Jest',
-  'HTML5',
-  'CSS3',
-  'VueJS',
-  'React Native',
-  '.NET',
-  'Aws',
-  'SQL',
-  'D3.js',
-  'Github',
-] as const;
-
-export type Technology = (typeof technologies)[number];
-type Knowlage = 'Very good knowledge' | 'Good knowledge' | 'Basic knowledge';
-export const knowlage: Record<Technology, Knowlage> = {
-  'Azure Devops': 'Good knowledge',
-  '.NET': 'Good knowledge',
-  HTML5: 'Good knowledge',
-  CSS3: 'Good knowledge',
-  Javascript: 'Very good knowledge',
-  Typescript: 'Very good knowledge',
-  'React Native': 'Good knowledge',
-  'Svelte, Sveltekit': 'Good knowledge',
-  Aws: 'Basic knowledge',
-  Cypress: 'Good knowledge',
-  Express: 'Good knowledge',
-  Jest: 'Good knowledge',
-  NextJS: 'Good knowledge',
-  NodeJs: 'Good knowledge',
-  Playwright: 'Basic knowledge',
-  React: 'Very good knowledge',
-  Rust: 'Basic knowledge',
-  SolidJs: 'Basic knowledge',
-  SQL: 'Good knowledge',
-  Unity: 'Good knowledge',
-  Storybook: 'Good knowledge',
-  Vitest: 'Basic knowledge',
-  VueJS: 'Good knowledge',
-  'D3.js': 'Basic knowledge',
-  Github: 'Good knowledge',
-};
-
 import icons from './icons';
-
-export const experience: Record<Technology, { knowlage: string; svg: string }> =
-  {
-    'Azure Devops': {
-      svg: icons.azure,
-      knowlage: '',
-    },
-    '.NET': {
-      svg: icons.dotnet,
-      knowlage: 'Im',
-    },
-    'D3.js': {
-      svg: icons.d3,
-      knowlage: '',
-    },
-    'React Native': {
-      svg: icons.react,
-      knowlage: '',
-    },
-    'Svelte, Sveltekit': {
-      svg: icons.svelte,
-      knowlage: '',
-    },
-    Aws: {
-      svg: icons.aws,
-      knowlage: '',
-    },
-    CSS3: {
-      svg: icons.css,
-      knowlage: '',
-    },
-    Cypress: {
-      svg: icons.cypress,
-      knowlage: '',
-    },
-    Express: {
-      svg: icons.express,
-      knowlage: '',
-    },
-    HTML5: {
-      svg: icons.html,
-      knowlage: '',
-    },
-    Javascript: {
-      svg: icons.js,
-      knowlage:
-        'I possess adept proficiency in JavaScript, proficiently leveraging its capabilities to develop engaging and dynamic web applications, employing clean and efficient coding practices to ensure optimal performance and user experience.',
-    },
-    Jest: {
-      svg: icons.jest,
-      knowlage:
-        'I have good experience with Jest, and I am comfortable using it in my projects.',
-    },
-    NextJS: {
-      svg: icons.next,
-      knowlage: '',
-    },
-    NodeJs: {
-      svg: icons.nodejs,
-      knowlage:
-        'I exhibit proficiency in Node.js, leveraging its capabilities to develop scalable and efficient server-side applications, employing asynchronous programming techniques to handle concurrent requests and ensure seamless performance.',
-    },
-    Playwright: {
-      svg: icons.playwright,
-      knowlage:
-        'I have used Playwright extensively in my hobby projects. I can use it to automate browser interactions and perform e2e testing and component testing.',
-    },
-    React: {
-      svg: icons.react,
-      knowlage:
-        'I have good experience with React, and I am comfortable using it in my projects. I have used it extensively in lots of projects.',
-    },
-    Rust: {
-      svg: icons.rust,
-      knowlage:
-        'I have a basic understanding of Rust understanding how it works, and I can use it in my projects.',
-    },
-    SolidJs: {
-      svg: icons.solidjs,
-      knowlage: '',
-    },
-    SQL: {
-      svg: icons.sql,
-      knowlage: '',
-    },
-    Storybook: {
-      svg: icons.storybook,
-      knowlage: '',
-    },
-    Typescript: {
-      svg: icons.ts,
-      knowlage: '',
-    },
-    Unity: {
-      svg: icons.unity,
-      knowlage: '',
-    },
-    Vitest: {
-      svg: icons.vitest,
-      knowlage: '',
-    },
-    VueJS: {
-      svg: icons.vue,
-      knowlage: '',
-    },
-    Github: {
-      svg: icons.github,
-      knowlage: '',
-    },
-  };
-
-type Interest = 'Very interested' | 'Interested' | '';
-export const interests: Record<Technology, Interest> = {
-  'Azure Devops': '',
-  '.NET': '',
-  HTML5: 'Interested',
-  CSS3: 'Interested',
-  Javascript: 'Very interested',
-  Typescript: 'Very interested',
-  'React Native': '',
-  'Svelte, Sveltekit': 'Very interested',
-  Aws: '',
-  Cypress: '',
-  Express: '',
-  Jest: '',
-  NextJS: '',
-  NodeJs: 'Interested',
-  Playwright: 'Interested',
-  React: '',
-  Rust: 'Very interested',
-  SolidJs: '',
-  SQL: '',
-  Unity: '',
-  Storybook: 'Interested',
-  Vitest: '',
-  VueJS: '',
-  'D3.js': '',
-  Github: '',
-};
 
 export const employments = [
   'Aareon Nordic',
@@ -218,7 +21,7 @@ export type Case = {
   name: string;
   company: string;
   employment: Employments;
-  technologies: Technology[];
+  technologies: string[];
   description: string;
   year: number;
   icon: string;
@@ -405,9 +208,29 @@ export const cases: Case[] = [
     name: 'Scan, Weigh, Record',
     technologies: ['React Native'],
     year: 2019,
+    link: '/happy-faces',
     icon: '<img src="/assets/images/happy faces/logo.webp" loading="lazy" alt="Happy Faces logo"/>',
     iconOpacity: 0.5,
-    content: [],
+    content: [
+      {
+        title: 'The Product',
+        img: '/assets/images/happy faces/1.webp',
+        alt: 'Happy Faces text hanging on a wood wall',
+        content: [
+          'Happy Faces is a restaurant located in trysil.',
+          'The application was designed in React Native and allows customers to scan QR codes and weigh their food items.',
+        ],
+      },
+      {
+        title: 'My role',
+        img: '/assets/images/happy faces/2.webp',
+        alt: 'An overview of the Happy Faces restaurant',
+        content: [
+          'My role at Happy Faces included:',
+          'Lead frontend developer',
+        ],
+      },
+    ],
     description:
       'I contributed to developing a React Native application for Happy Faces restaurant at QueensLab, focusing on QR/bar code functionality and collaborating closely with backend developers and UX designers to meet tight deadlines.',
   },
@@ -536,9 +359,23 @@ export const cases: Case[] = [
     name: 'Aareon Nordic',
     technologies: ['.NET'],
     year: 2015,
+    link: '/aareon',
     icon: icons.aareon,
     iconOpacity: 0.5,
-    content: [],
+    content: [
+      {
+        title: 'The Product',
+        img: '/assets/images/aareon/1.webp',
+        alt: 'Image of the UI of aareon xpand',
+        content: ['The company was founded in 2015'],
+      },
+      {
+        title: 'My role',
+        img: '/assets/images/aareon/2.webp',
+        alt: 'Parkinglot outside of the gothenburg aareon office',
+        content: ['I was part of the core team working on the common modules'],
+      },
+    ],
     description:
       'I contributed to the core functionality of an application, collaborating closely with other teams and supporting departments to ensure smooth operation and timely issue resolution.',
   },
@@ -550,7 +387,7 @@ export type Skill = {
   icon: string;
 };
 
-export const skills: Skill[] = [
+export const skills = [
   {
     name: 'JavaScript',
     description: ['I have great experience with JavaScript and its ecosystem'],
@@ -563,10 +400,148 @@ export const skills: Skill[] = [
   },
   {
     name: 'React',
+    description: ['I have great experience with React and its ecosystem'],
+    icon: icons.react,
+  },
+  {
+    name: 'NextJS',
+    description: ['I have great experience with NextJS and its ecosystem'],
+    icon: icons.next,
+  },
+  {
+    name: 'Svelte',
+    description: ['I have great experience with Svelte and its ecosystem'],
+    icon: icons.svelte,
+  },
+  {
+    name: 'Sveltekit',
+    description: ['I have great experience with Sveltekit and its ecosystem'],
+    icon: icons.svelte,
+  },
+  {
+    name: 'VueJS',
+    description: ['I have great experience with VueJS and its ecosystem'],
+    icon: icons.vue,
+  },
+  {
+    name: 'Storybook',
+    description: ['I have great experience with Storybook and its ecosystem'],
+    icon: icons.storybook,
+  },
+  {
+    name: 'Cypress',
+    description: ['I have great experience with Cypress and its ecosystem'],
+    icon: icons.cypress,
+  },
+  {
+    name: 'Jest',
+    description: ['I have great experience with Jest and its ecosystem'],
+    icon: icons.jest,
+  },
+  {
+    name: 'HTML5',
+    description: ['I have great experience with HTML5 and its ecosystem'],
+    icon: icons.html,
+  },
+  {
+    name: 'CSS3',
+    description: ['I have great experience with CSS3 and its ecosystem'],
+    icon: icons.css,
+  },
+  {
+    name: 'SQL',
+    description: ['I have great experience with SQL and its ecosystem'],
+    icon: icons.sql,
+  },
+  {
+    name: 'Azure Devops',
     description: [
-      'I have great experience with React and its ecosystem',
-      'I have great experience with React and its ecosystem',
+      'I have great experience with Azure Devops and its ecosystem',
+    ],
+    icon: icons.azure,
+  },
+  {
+    name: 'Unity',
+    description: ['I have great experience with Unity and its ecosystem'],
+    icon: icons.unity,
+  },
+  {
+    name: 'NodeJs',
+    description: ['I have great experience with NodeJs and its ecosystem'],
+    icon: icons.nodejs,
+  },
+  {
+    name: 'Express',
+    description: ['I have great experience with Express and its ecosystem'],
+    icon: icons.express,
+  },
+  {
+    name: 'D3.js',
+    description: ['I have great experience with D3.js and its ecosystem'],
+    icon: icons.d3,
+  },
+  {
+    name: 'Github',
+    description: ['I have great experience with Github and its ecosystem'],
+    icon: icons.github,
+  },
+  {
+    name: 'AWS',
+    description: ['I have great experience with AWS and its ecosystem'],
+    icon: icons.aws,
+  },
+  {
+    name: 'Rust',
+    description: ['I have great experience with Rust and its ecosystem'],
+    icon: icons.rust,
+  },
+  {
+    name: 'Vitest',
+    description: ['I have great experience with Vitest and its ecosystem'],
+    icon: icons.vitest,
+  },
+  {
+    name: 'Playwright',
+    description: ['I have great experience with Playwright and its ecosystem'],
+    icon: icons.playwright,
+  },
+  {
+    name: 'SolidJs',
+    description: ['I have great experience with SolidJs and its ecosystem'],
+    icon: icons.solidjs,
+  },
+  {
+    name: 'React Native',
+    description: [
+      'I have great experience with React Native and its ecosystem',
     ],
     icon: icons.react,
   },
-];
+  {
+    name: '.NET',
+    description: ['I have great experience with .NET and its ecosystem'],
+    icon: icons.dotnet,
+  },
+  {
+    name: 'Docker',
+    description: ['I have great experience with Docker and its ecosystem'],
+    icon: icons.docker,
+  },
+  {
+    name: 'Figma',
+    description: ['I have great experience with Figma and its ecosystem'],
+    icon: icons.figma,
+  },
+  {
+    name: 'Gitlab',
+    description: ['I have great experience with Gitlab and its ecosystem'],
+    icon: icons.gitlab,
+  },
+  {
+    name: 'Git',
+    description: ['I have great experience with Git and its ecosystem'],
+    icon: icons.git,
+  },
+] as const;
+
+type t = (typeof skills)[number]['name'];

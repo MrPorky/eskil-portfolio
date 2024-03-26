@@ -2,6 +2,7 @@
 *:not(head, style, script, svg, svg *, ul, li),
 *::before,
 *::after {
+  all: unset;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;

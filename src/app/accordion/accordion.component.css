@@ -10,7 +10,7 @@ h3 {
   gap: var(--space-md);
   font-weight: normal;
   margin: 0;
-  padding: 1em 1.5em;
+  padding: var(--space-sm) var(--space-md);
   text-align: start;
   width: 100%;
 }
@@ -31,7 +31,7 @@ button {
   transition: 300ms;
   border: 1px solid var(--secondary);
   background-color: rgba(var(--secondary-values), 0.5);
-  padding: 0em 1.5em;
+  padding-inline: var(--space-md);
 }
 
 .accordion-panel > * {
@@ -41,4 +41,9 @@ button {
 .accordion-panel.visible {
   visibility: visible;
   grid-template-rows: 1fr;
+}
+
+:host:not(:last-of-type) .accordion-panel.visible {
+  margin-block-end: var(--space-md);
+  padding-block: var(--space-md);
 }

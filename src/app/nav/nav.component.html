@@ -1,21 +1,25 @@
 <nav role="navigation" aria-label="Main menu">
   <button
+    id="menu-button"
     [attr.aria-expanded]="open"
     aria-controls="main-menu"
     aria-label="Menu"
-    aria-controls="main-menu"
     class="menu"
     (click)="toggle()"
   >
-    <app-hamburger [open]="open"></app-hamburger>
+    <app-hamburger aria-hidden="true" [open]="open"></app-hamburger>
   </button>
 
-  <div id="main-menu" [class.visible]="open">
+  <div
+    id="main-menu"
+    aria-labelledby="menu-button"
+    role="region"
+    [class.visible]="open"
+  >
     <ul class="column">
+      <a href="/">Home</a>
+      <a href="/cases">Cases</a>
       <a href="/skills">My Skills</a>
-      <a href="/test">test</a>
-      <a href="/test">test</a>
-      <a href="/test">test</a>
     </ul>
   </div>
 </nav>

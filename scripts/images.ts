@@ -123,5 +123,27 @@ await resizeTo(
   250
 );
 
+await resizeTo(
+  './images/happy faces/1.jpg',
+  './src/assets/images/happy faces/1.webp',
+  250
+);
+await resizeTo(
+  './images/happy faces/2.jpg',
+  './src/assets/images/happy faces/2.webp',
+  250
+);
+
+await resizeTo(
+  './images/aareon/1.png',
+  './src/assets/images/aareon/1.webp',
+  250
+);
+await resizeTo(
+  './images/aareon/2.jpg',
+  './src/assets/images/aareon/2.webp',
+  250
+);
+
 sharp.cache(false);
 await fs.rmSync('./images/tmp', { recursive: true, force: true });
