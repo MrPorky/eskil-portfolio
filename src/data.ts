@@ -21,7 +21,7 @@ export type Case = {
   name: string;
   company: string;
   employment: Employments;
-  technologies: string[];
+  technologies: Technology[];
   description: string;
   year: number;
   icon: string;
@@ -35,7 +35,7 @@ export const cases: Case[] = [
     employment: 'Yara Marine',
     company: 'Yara Marine',
     name: 'Fleet Analytics',
-    technologies: ['Typescript', 'React', 'Jest'],
+    technologies: ['TypeScript', 'React', 'Jest'],
     link: '/fleet-analytics',
     icon: icons.yara,
     iconOpacity: 0.9,
@@ -75,7 +75,7 @@ export const cases: Case[] = [
     employment: 'QueensLab',
     company: 'Volvo Group Connected Solutions',
     name: 'Customer portal',
-    technologies: ['Javascript', 'React', 'Jest'],
+    technologies: ['JavaScript', 'React', 'Jest'],
     year: 2022,
     link: '/customer-connect',
     icon: icons.volvo,
@@ -111,7 +111,7 @@ export const cases: Case[] = [
     employment: 'QueensLab',
     company: 'Osstell',
     name: 'Osstell Connect',
-    technologies: ['Typescript', 'React', 'React Native'],
+    technologies: ['TypeScript', 'React', 'React Native'],
     year: 2021,
     link: '/osstell-connect',
     icon: icons.ostell,
@@ -178,7 +178,7 @@ export const cases: Case[] = [
     employment: 'QueensLab',
     company: 'Ericsson',
     name: 'Ericsson',
-    technologies: ['.NET', 'React', 'Javascript', 'Typescript'],
+    technologies: ['.NET', 'React', 'JavaScript', 'TypeScript'],
     year: 2020,
     link: '/ericsson',
     icon: icons.ericsson,
@@ -238,7 +238,7 @@ export const cases: Case[] = [
     employment: 'QueensLab',
     company: 'Blue Mobile Systems',
     name: 'Guardtools',
-    technologies: ['VueJS', 'Javascript', 'Storybook', 'D3.js'],
+    technologies: ['VueJS', 'JavaScript', 'Storybook', 'D3.js'],
     year: 2019,
     link: '/blue-mobile-systems',
     icon: icons.guardtools,
@@ -321,7 +321,7 @@ export const cases: Case[] = [
     employment: 'QueensLab',
     company: 'Studio Ekberg',
     name: 'Studio Ekberg',
-    technologies: ['VueJS', 'Javascript', 'HTML5', 'CSS3'],
+    technologies: ['VueJS', 'JavaScript', 'HTML5', 'CSS3'],
     year: 2019,
     icon: '<img src="/assets/images/studio ekberg/logo.webp"  loading="lazy" alt="Studio Ekberg"/>',
     iconOpacity: 0.5,
@@ -333,7 +333,7 @@ export const cases: Case[] = [
     employment: 'QueensLab',
     company: 'Zooma',
     name: 'Zooma',
-    technologies: ['React', 'Javascript', 'HTML5', 'CSS3'],
+    technologies: ['React', 'JavaScript', 'HTML5', 'CSS3'],
     year: 2019,
     icon: icons.zooma,
     iconOpacity: 0.5,
@@ -345,7 +345,7 @@ export const cases: Case[] = [
     employment: 'QueensLab',
     company: 'QueensLab',
     name: 'QueensLab',
-    technologies: ['Unity', 'VueJS', 'Javascript', '.NET'],
+    technologies: ['Unity', 'VueJS', 'JavaScript', '.NET'],
     year: 2018,
     icon: icons.queenslab,
     iconOpacity: 0.9,
@@ -544,4 +544,4 @@ export const skills = [
   },
 ] as const;
 
-type t = (typeof skills)[number]['name'];
+type Technology = (typeof skills)[number]['name'];

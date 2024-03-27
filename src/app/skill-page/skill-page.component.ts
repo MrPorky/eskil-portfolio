@@ -10,5 +10,5 @@ import { skills } from '../../data';
   styleUrl: './skill-page.component.css',
 })
 export class SkillPageComponent {
-  skills = skills;
+  skills = [...skills].sort((a, b) => a.name.localeCompare(b.name));
 }
