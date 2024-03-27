@@ -11,7 +11,7 @@ export const routes: Routes = [
     component: HomePageComponent,
   },
   {
-    path: 'cases',
+    path: 'experience',
     component: CasesPageComponent,
   },
   {
