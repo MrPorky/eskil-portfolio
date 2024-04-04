@@ -15,7 +15,6 @@ h3 {
   width: 100%;
 }
 
-.accordion-trigger:focus,
 .accordion-trigger:hover {
   background-color: rgba(var(--primary-values), 0.2);
 }
@@ -41,9 +40,9 @@ button {
 .accordion-panel.visible {
   visibility: visible;
   grid-template-rows: 1fr;
+  padding-block: var(--space-md);
 }
 
 :host:not(:last-of-type) .accordion-panel.visible {
   margin-block-end: var(--space-md);
-  padding-block: var(--space-md);
 }

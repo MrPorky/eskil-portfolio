@@ -381,166 +381,271 @@ export const cases: Case[] = [
   },
 ];
 
+export enum SkillLevel {
+  Expert = 5,
+  Intermediate = 4,
+  Advanced = 3,
+  Familiar = 2,
+  Novice = 1,
+}
+
+type LevelsString = keyof typeof SkillLevel;
+
 export type Skill = {
   name: string;
   description: string[];
   icon: string;
+  skillLevel: LevelsString;
 };
 
-export const skills = [
+export const skills: Skill[] = [
   {
     name: 'JavaScript',
-    description: ['I have great experience with JavaScript and its ecosystem'],
+    description: [
+      'I have extensive experience and knowledge of JavaScript. I am highly proficient in using it to create dynamic and interactive web content.',
+    ],
     icon: icons.js,
+    skillLevel: 'Expert',
   },
   {
     name: 'TypeScript',
-    description: ['I have great experience with TypeScript and its ecosystem'],
+    description: [
+      'I am highly skilled in TypeScript, allowing me to write maintainable and scalable code for complex applications.',
+    ],
     icon: icons.ts,
+    skillLevel: 'Expert',
   },
   {
     name: 'React',
-    description: ['I have great experience with React and its ecosystem'],
+    description: [
+      'I am well versed in React, which enables me to build user interfaces and single-page web applications with ease.',
+    ],
     icon: icons.react,
+    skillLevel: 'Expert',
   },
   {
     name: 'NextJS',
-    description: ['I have great experience with NextJS and its ecosystem'],
+    description: [
+      'While not a full expert, I am highly experienced in NextJS and can create server-side rendered React applications that load quickly and are easy to maintain.',
+    ],
     icon: icons.next,
+    skillLevel: 'Advanced',
   },
   {
     name: 'Svelte',
-    description: ['I have great experience with Svelte and its ecosystem'],
+    description: [
+      'I have a good understanding of Svelte and can use it to create efficient and lightweight user interfaces for web applications.',
+    ],
     icon: icons.svelte,
+    skillLevel: 'Intermediate',
   },
   {
     name: 'Sveltekit',
-    description: ['I have great experience with Sveltekit and its ecosystem'],
+    description: [
+      'I am knowledgeable in Sveltekit, allowing me to build modern web applications with server-side rendering and other advanced features.',
+    ],
     icon: icons.svelte,
+    skillLevel: 'Advanced',
   },
   {
     name: 'VueJS',
-    description: ['I have great experience with VueJS and its ecosystem'],
+    description: [
+      'I have a strong understanding of VueJS, which enables me to create highly reactive user interfaces for web applications.',
+    ],
     icon: icons.vue,
+    skillLevel: 'Advanced',
   },
   {
     name: 'Storybook',
-    description: ['I have great experience with Storybook and its ecosystem'],
+    description: [
+      'I am familiar with Storybook and can use it to build and document UI components in isolation for consistent user experiences across different platforms.',
+    ],
     icon: icons.storybook,
+    skillLevel: 'Intermediate',
   },
   {
     name: 'Cypress',
-    description: ['I have great experience with Cypress and its ecosystem'],
+    description: [
+      'I have a basic understanding of Cypress, which helps me automate end-to-end testing for web applications to ensure they function as expected.',
+    ],
     icon: icons.cypress,
+    skillLevel: 'Familiar',
   },
   {
     name: 'Jest',
-    description: ['I have great experience with Jest and its ecosystem'],
+    description: [
+      'I am comfortable using Jest to write and run unit tests for JavaScript code, ensuring that the functionality of my applications is reliable and accurate.',
+    ],
     icon: icons.jest,
+    skillLevel: 'Intermediate',
   },
   {
     name: 'HTML5',
-    description: ['I have great experience with HTML5 and its ecosystem'],
+    description: [
+      'I have extensive experience with HTML5, which allows me to structure content and create the foundation of web pages for various devices and platforms.',
+    ],
     icon: icons.html,
+    skillLevel: 'Expert',
   },
   {
     name: 'CSS3',
-    description: ['I have great experience with CSS3 and its ecosystem'],
+    description: [
+      'I am highly proficient in CSS3, enabling me to style and layout web content with precision and creativity.',
+    ],
     icon: icons.css,
+    skillLevel: 'Expert',
   },
   {
     name: 'SQL',
-    description: ['I have great experience with SQL and its ecosystem'],
+    description: [
+      'I have a strong understanding of SQL, which allows me to manage and manipulate data stored in relational databases for various applications.',
+    ],
     icon: icons.sql,
+    skillLevel: 'Advanced',
   },
   {
     name: 'Azure Devops',
     description: [
-      'I have great experience with Azure Devops and its ecosystem',
+      'I am familiar with Azure DevOps and can use it to plan, track, and collaborate on software development projects within a team setting.',
     ],
     icon: icons.azure,
+    skillLevel: 'Familiar',
   },
   {
     name: 'Unity',
-    description: ['I have great experience with Unity and its ecosystem'],
+    description: [
+      'I have a solid understanding of Unity, which enables me to create interactive 3D experiences and games for various platforms.',
+    ],
     icon: icons.unity,
+    skillLevel: 'Advanced',
   },
   {
     name: 'NodeJs',
-    description: ['I have great experience with NodeJs and its ecosystem'],
+    description: [
+      'I am highly experienced in NodeJS, allowing me to build scalable network applications using JavaScript on the server side.',
+    ],
     icon: icons.nodejs,
+    skillLevel: 'Expert',
   },
   {
     name: 'Express',
-    description: ['I have great experience with Express and its ecosystem'],
+    description: [
+      'I have a good understanding of Express and can use it to create web applications with RESTful APIs and middleware for handling requests.',
+    ],
     icon: icons.express,
+    skillLevel: 'Intermediate',
   },
   {
     name: 'D3.js',
-    description: ['I have great experience with D3.js and its ecosystem'],
+    description: [
+      'I am somewhat familiar with D3.js, which allows me to manipulate documents based on data using CSS selectors and the DOM API.',
+    ],
     icon: icons.d3,
+    skillLevel: 'Familiar',
   },
   {
     name: 'Github',
-    description: ['I have great experience with Github and its ecosystem'],
+    description: [
+      'I have a strong understanding of GitHub, which enables me to collaborate with others, manage version control, and contribute to open-source projects.',
+    ],
     icon: icons.github,
+    skillLevel: 'Advanced',
   },
   {
     name: 'AWS',
-    description: ['I have great experience with AWS and its ecosystem'],
+    description: [
+      'I have limited experience with AWS, but I am familiar with some of the core services such as EC2 and S3 for hosting web applications',
+    ],
     icon: icons.aws,
+    skillLevel: 'Novice',
   },
   {
     name: 'Rust',
-    description: ['I have great experience with Rust and its ecosystem'],
+    description: [
+      'I have a basic understanding of Rust, which allows me to write efficient and safe systems-level code for various applications.',
+    ],
     icon: icons.rust,
+    skillLevel: 'Familiar',
+  },
+  {
+    name: 'Vite',
+    description: [
+      'I am highly proficient in Vite, which enables me to create fast and lightweight development environments for modern web projects.',
+    ],
+    icon: icons.vite,
+    skillLevel: 'Advanced',
   },
   {
     name: 'Vitest',
-    description: ['I have great experience with Vitest and its ecosystem'],
+    description: [
+      'I have a basic understanding of Vitest, which allows me to write and run unit tests for JavaScript code with ease and efficiency.',
+    ],
     icon: icons.vitest,
+    skillLevel: 'Familiar',
   },
   {
     name: 'Playwright',
-    description: ['I have great experience with Playwright and its ecosystem'],
+    description: [
+      'I am somewhat familiar with Playwright, which helps me automate end-to-end testing for web applications across multiple browsers and environments.',
+    ],
     icon: icons.playwright,
+    skillLevel: 'Familiar',
   },
   {
     name: 'SolidJs',
-    description: ['I have great experience with SolidJs and its ecosystem'],
+    description: [
+      'I have a basic understanding of SolidJs, which allows me to create reactive user interfaces for web applications with a focus on simplicity and performance.',
+    ],
     icon: icons.solidjs,
+    skillLevel: 'Familiar',
   },
   {
     name: 'React Native',
     description: [
-      'I have great experience with React Native and its ecosystem',
+      'I am highly experienced in React Native, which enables me to build mobile applications with the same codebase as their web counterparts using the React library. This allows for efficient development and consistent user experiences across different platforms.',
     ],
     icon: icons.react,
+    skillLevel: 'Advanced',
   },
   {
     name: '.NET',
-    description: ['I have great experience with .NET and its ecosystem'],
+    description: [
+      "I have a good understanding of .NET, which allows me to develop applications and services for various platforms using Microsoft's programming framework.",
+    ],
     icon: icons.dotnet,
+    skillLevel: 'Intermediate',
   },
   {
     name: 'Docker',
-    description: ['I have great experience with Docker and its ecosystem'],
+    description: [
+      'I am familiar with Docker, which enables me to package applications into containers for easier deployment, scaling, and management across different environments.',
+    ],
     icon: icons.docker,
+    skillLevel: 'Familiar',
   },
   {
     name: 'Figma',
-    description: ['I have great experience with Figma and its ecosystem'],
+    description: [
+      'I have a basic understanding of Figma, which allows me to design user interfaces and create interactive prototypes for web and mobile applications.',
+    ],
     icon: icons.figma,
+    skillLevel: 'Familiar',
   },
   {
     name: 'Gitlab',
-    description: ['I have great experience with Gitlab and its ecosystem'],
+    description: [
+      'I have a strong understanding of GitLab, which enables me to manage code repositories, track issues, and collaborate with others on software development projects within a team setting.',
+    ],
     icon: icons.gitlab,
+    skillLevel: 'Advanced',
   },
   {
     name: 'Git',
-    description: ['I have great experience with Git and its ecosystem'],
+    description: [
+      'I am highly proficient in Git, which allows me to manage version control for my applications and collaborate with others using distributed revision control systems.',
+    ],
     icon: icons.git,
+    skillLevel: 'Advanced',
   },
 ] as const;
 
