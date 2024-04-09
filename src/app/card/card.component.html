@@ -10,6 +10,17 @@
       <i>at {{ case.employment }}</i>
     </div>
     <p>{{ case.description }}</p>
+    <div class="row skills">
+      @for (technology of technologies; track case) {
+      <a
+        href="skills#{{ technology.name }}"
+        [title]="technology.name"
+        [attr.aria-label]="technology.name"
+      >
+        <i class="icon" aria-hidden="true" [innerHTML]="technology.icon"></i>
+      </a>
+      }
+    </div>
 
     @if (case.link) {
     <a class="button" href="{{ case.link }}"> View Case </a>

@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Case, cases } from '../../data';
+import { Case, Skill, cases, skills } from '../../data';
 import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { extra } from '../../icons';
+import { extraIcons } from '../../icons';
 
 const links = cases
   .map((item) => item.link)
@@ -24,6 +24,7 @@ type CasePage = Case & { next?: string; prev?: string };
   styleUrl: './case-page.component.css',
 })
 export class CasePageComponent implements OnInit {
+  technologies: (Omit<Skill, 'icon'> & { icon: SafeHtml })[] = [];
   data!: CasePage;
 
   @Input()
@@ -59,12 +60,19 @@ export class CasePageComponent implements OnInit {
 
   constructor(private sanitizer: DomSanitizer, private router: Router) {
     this.chevron_left = this.sanitizer.bypassSecurityTrustHtml(
-      extra.chevron_left
+      extraIcons.chevron_left
     );
   }
 
   ngOnInit() {
     if (this.data.icon)
       this.svg = this.sanitizer.bypassSecurityTrustHtml(this.data.icon);
+
+    this.technologies = skills
+      .filter((skill) => this.data.technologies.includes(skill.name))
+      .map((skill) => ({
+        ...skill,
+        icon: this.sanitizer.bypassSecurityTrustHtml(skill.icon),
+      }));
   }
 }

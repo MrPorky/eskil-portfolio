@@ -1,5 +1,5 @@
 :host {
-  --header-height: 2rem;
+  --header-height: 3rem;
 
   display: flex;
   min-height: 70px;
@@ -45,7 +45,7 @@
 
 .content {
   flex: 1;
-  padding-block-end: var(--space-md);
+  padding-block-end: var(--space-xl);
 }
 
 .date {
@@ -82,7 +82,30 @@
   gap: 0.2rem;
 }
 
-@media (min-width: 770px) {
+.skills {
+  gap: var(--space-xs);
+}
+
+.skills a {
+  display: flex;
+  padding: var(--space-xs);
+  border: 1px solid var(--secondary);
+  border-radius: var(--space-xs);
+  transition: all 300ms;
+}
+
+.skills a:hover {
+  border-color: rgba(var(--base-values), 0.75);
+  background-color: var(--secondary);
+}
+
+.skills i {
+  --size: 1em;
+  width: var(--size);
+  height: var(--size);
+}
+
+@media (min-width: 901px) {
   :host:nth-child(odd) .date::before {
     clip-path: polygon(0 0, 100% 0, 100% 100%);
     left: 0;
@@ -104,10 +127,14 @@
   .sepparator {
     padding-inline-start: calc(var(--header-height) / 2);
   }
+
+  .content {
+    padding-block-end: var(--space-md);
+  }
 }
 
-@media (min-width: 600px) {
-  :host {
-    --header-height: 3rem;
+@media (max-width: 770px) {
+  .sepparator {
+    display: none;
   }
 }

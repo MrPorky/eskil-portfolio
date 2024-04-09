@@ -151,13 +151,12 @@ body {
 .icon {
   --size: 100%;
   display: inline-block;
-  width: auto;
-  height: auto;
 }
 
 .icon svg {
   width: var(--size, 100%);
   height: var(--size, 100%);
+  pointer-events: none;
 }
 
 .icon img {

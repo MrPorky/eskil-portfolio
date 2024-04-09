@@ -10,6 +10,20 @@
       [innerHTML]="svg"
       aria-hidden="true"
     ></div>
+    <div class="skills row">
+      @for (technology of technologies; track technologies) {
+      <a href="skills#{{ technology.name }}" class="row">
+        <i
+          class="icon"
+          [title]="technology.name"
+          [attr.aria-label]="technology.name"
+          aria-hidden="true"
+          [innerHTML]="technology.icon"
+        ></i>
+        <span>{{ technology.name }}</span>
+      </a>
+      }
+    </div>
   </div>
   <div class="divider breakout"></div>
   <div class="body column">

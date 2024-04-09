@@ -42,7 +42,7 @@ import eg from './Eg.svg';
 import chevron_left from './chevron-left.svg';
 import git from './git.svg';
 
-export const skills = {
+export const skillIcons = {
   angular,
   aws,
   azure,
@@ -75,7 +75,7 @@ export const skills = {
   git,
 };
 
-export const compamies = {
+export const companyIcons = {
   yara,
   volvo,
   ostell,
@@ -88,19 +88,19 @@ export const compamies = {
   aareon,
 };
 
-export const media = {
+export const mediaIcons = {
   linkedin,
   github,
 };
 
-export const extra = {
+export const extraIcons = {
   eg,
   chevron_left,
 };
 
 export default {
-  ...skills,
-  ...compamies,
-  ...media,
-  ...extra,
+  ...skillIcons,
+  ...companyIcons,
+  ...mediaIcons,
+  ...extraIcons,
 };

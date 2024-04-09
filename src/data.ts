@@ -69,7 +69,7 @@ export const cases: Case[] = [
       },
     ],
     description:
-      'As the lead front-end developer at Yara Marine, I spearheaded projects in Fleet Analytics and Route Pilot AI, leveraging my expertise to drive innovative solutions.',
+      'In my capacity as the lead front-end developer at Yara Marine, I have dedicated my skills to various projects such as Fleet Analytics and Route Pilot AI, harnessing my expertise to fuel innovative solutions for the company.',
   },
   {
     employment: 'QueensLab',
@@ -398,7 +398,7 @@ export type Skill = {
   skillLevel: LevelsString;
 };
 
-export const skills: Skill[] = [
+export const skills = [
   {
     name: 'JavaScript',
     description: [
@@ -647,6 +647,6 @@ export const skills: Skill[] = [
     icon: icons.git,
     skillLevel: 'Advanced',
   },
-] as const;
+] as const satisfies readonly Skill[];
 
 type Technology = (typeof skills)[number]['name'];

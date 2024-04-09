@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { animate, bezier, type Vector2 } from '../../lib/animate';
-import { skills } from '../../icons';
+import { skillIcons } from '../../icons';
 
 const iconSize = 32;
 
@@ -28,7 +28,7 @@ export class FirefliesComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    const icons = Object.values(skills).sort((a, b) => Math.random() - 0.5);
+    const icons = Object.values(skillIcons).sort((a, b) => Math.random() - 0.5);
     const el = this.el.nativeElement;
 
     if (!el || !this.window) return;

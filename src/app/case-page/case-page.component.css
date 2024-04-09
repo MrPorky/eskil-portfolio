@@ -81,6 +81,33 @@ img {
   width: 100%;
 }
 
+.skills {
+  gap: var(--space-xs);
+  padding-block-end: var(--space-lg);
+}
+
+.skills a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs);
+  border: 1px solid var(--secondary);
+  border-radius: var(--space-xs);
+  transition: all 300ms;
+}
+
+.skills a:hover {
+  border-color: rgba(var(--base-values), 0.75);
+  background-color: var(--secondary);
+}
+
+.skills i {
+  --size: 1.5em;
+  width: var(--size);
+  height: var(--size);
+}
+
 @media (min-width: 950px) {
   .nav-chapters {
     background: none;
