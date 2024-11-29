@@ -12,7 +12,7 @@
     "test": "ng test",
     "serve:ssr:eskil-portfolio": "node dist/eskil-portfolio/server/server.mjs",
     "images": "tsx ./scripts/images.ts",
-    "routesFile": "tsx --loader ./esm-loader.js ./scripts/routesFile.ts ",
+    "routesFile": "tsx --loader ./svg-loader.mjs scripts/routesFile.ts",
     "prebuild": "pnpm images && pnpm routesFile"
   },
   "private": true,
