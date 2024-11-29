@@ -12,7 +12,8 @@
     "test": "ng test",
     "serve:ssr:eskil-portfolio": "node dist/eskil-portfolio/server/server.mjs",
     "images": "node --loader ts-node/esm ./scripts/images.ts",
-    "routesFile": "node --import ./scripts/register-hooks.js --loader ts-node/esm ./scripts/routesFile.ts"
+    "routesFile": "node --import ./scripts/register-hooks.js --loader ts-node/esm ./scripts/routesFile.ts",
+    "prebuild": "pnpm images && pnpm routesFile"
   },
   "private": true,
   "dependencies": {

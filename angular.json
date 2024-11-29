@@ -21,12 +21,13 @@
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
-            "assets": ["src/favicon.ico", "src/assets", "src/_redirects"],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.css"],
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": {
-              "routesFile": "routes.txt"
+              "routesFile": "routes.txt",
+              "discoverRoutes": true
             },
             "ssr": {
               "entry": "server.ts"
