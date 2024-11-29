@@ -26,6 +26,7 @@
     "esm": true,
     "experimentalSpecifierResolution": "node"
   },
+  "include": ["src/**/*.ts", "src/**/*.d.ts"],
   "files": ["src/types.d.ts"],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
