@@ -1,7 +1,0 @@
-[context.production]
-publish = "dist/eskil-portfolio/browser"
-
-[[redirects]]
-from = "/*"
-to = "/404/index.html"
-status = 404
