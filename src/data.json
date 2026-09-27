@@ -1,0 +1,748 @@
+{
+  "name": "Eskil Ganslandt",
+  "title": "Senior Software Engineer & Frontend Architect",
+  "company": "KNIGHTEC GROUP",
+  "roles": ["Frontend", "Fullstack", "Backend"],
+  "presentations": {
+    "professional": "I'm a Senior Software Engineer specialising in Frontend Architecture with over a decade of consulting experience across telecom, maritime, e-commerce, IoT, and fintech. I design and deliver high-quality, user-focused web solutions grounded in Web Standards — writing code that stays maintainable as frameworks come and go. Beyond the frontend, I bring a broad technical foundation: I understand backend and API design, have built AI agent harnesses, managed self-hosted infrastructure with Docker, worked with ESP32 microcontrollers, and studied 3D rendering through Blender, Unity and Godot. I may not be professionally proficient in every domain, but I understand how the pieces fit together — which makes me a more effective collaborator and a sharper problem-solver on any team.",
+    "personal": "I'm the kind of person who's always curious about how things work — not just in code, but across the whole stack of technology life runs on. My passion for coding started in 4th grade when I asked my dad — a developer himself — how games were made. He bought my brother and me a Game Maker course and a licence, and the hook sank in immediately. I recruited a friend from school to handle the art (with a creatively-sourced copy of Photoshop) while I handled the code. Outside client work I run a home lab server, experiment with local-first sync engines like Zero and Jazz.tools, dabble in hardware with ESP32s, and build hobby projects in Unity and Godot just to understand how 3D rendering and shaders work. Though I seem like the nicest guy you'll meet, I'm also known for creative pranks — like programming my brother's phone to play cheesy music at the worst possible moments."
+  },
+  "projects": [
+    {
+      "role": "Frontend",
+      "period": "Aug 2025 - Ongoing",
+      "client": "Telia",
+      "description": "I led frontend development for an in-house project to rebuild a core tool/product for Telia. I collaborated closely with backend engineers to align API design and ensure seamless frontend–backend integration.",
+      "narrative": "I lead frontend development on a full rebuild of a reseller management tool for Telia, with both frontend and backend built from scratch by our in-house team. The team includes UX embedded directly alongside development, which enables tight feedback loops and fast iterations. A central challenge is that UX discoveries and UI design happen in parallel with development — we're building features while the designs are still evolving. This demands a flexible architecture and a constant flow of small, incremental changes. I align closely with the backend team on API contracts and use a mock server to keep the async flow intact even as things shift, so the frontend is never blocked waiting for the backend to catch up.",
+      "achievements": [
+        "Rebuilding a Telia reseller management tool from scratch as part of a tight-knit in-house team with embedded UX",
+        "Maintaining frontend momentum in a parallel-track environment where UX discoveries and development happen simultaneously",
+        "Using a contract-first and mock-server approach to keep frontend unblocked throughout a continuously evolving design and API surface"
+      ],
+      "skills": {
+        "HTML": 5,
+        "CSS": 4,
+        "JIRA": 2,
+        "React.js": 4,
+        "Storybook": 3,
+        "JavaScript/TypeScript": 5,
+        "GitHub Actions": 4,
+        "TanStack Query": 4,
+        "tanstack-router": 4
+      }
+    },
+    {
+      "role": "Frontend",
+      "period": "May 2024 - Dec 2024",
+      "client": "Ellos",
+      "description": "I developed a web application used by warehouse staff at Ellos to manage and process product returns.",
+      "quantifiedResults": "Deployed across 2 warehouses — one in Sweden and one in Latvia.",
+      "narrative": "I built an internal returns management application for Ellos warehouse staff. A highlight was visiting the warehouse and meeting the people actually using the software — understanding their workflow firsthand and iterating directly from their feedback. The most technically demanding challenge was integrating barcode scanner input to speed up warehouse operations. Staff wanted to navigate the entire system with minimal UI interaction, so I designed a complex keybinding system to handle scanner input and built a state machine to control what happened in different scanning scenarios. The result was a UI that adapted its behaviour based on context, letting warehouse workers move through returns workflows as fast as the scanner could go.",
+      "achievements": [
+        "Visited the warehouse and conducted hands-on user research with warehouse staff, directly informing the product iterations",
+        "Designed a keybinding system for barcode scanner navigation, minimising required UI interaction",
+        "Built a state machine to manage context-dependent scanner behaviour across different workflow scenarios"
+      ],
+      "skills": {
+        "HTML": 5,
+        "CSS": 4,
+        "Node.js": 4,
+        "JIRA": 2,
+        "Storybook": 3,
+        "Vue.js": 3,
+        "JavaScript/TypeScript": 5
+      }
+    },
+    {
+      "role": "Fullstack",
+      "period": "May 2024 - Aug 2024",
+      "client": "Norion",
+      "description": "I designed and developed a Proof of Concept for a platform-independent application at Norion Bank. Technical details remain confidential.",
+      "narrative": "An exciting and open-ended assignment at Norion Bank. The goal was to build a cross-platform PoC (web, iOS, Android) that consumed the bank's existing authentication solution and preserved the user session when moving between the new app and their legacy web application — a tricky SSO handoff problem. Because the requirements were deliberately vague, I took the initiative to explore two distinct architectural approaches, built working examples of each, and presented a side-by-side comparison of their pros and cons. This gave the client a concrete, evidence-based foundation for making their platform decision.",
+      "achievements": [
+        "Built a cross-platform PoC (web, iOS, Android) integrating with an existing auth solution to preserve sessions across the app and legacy web application",
+        "Independently explored two architectural approaches and delivered a clear pros/cons comparison to guide the client's platform decision",
+        "Navigated vague requirements by scoping the problem into two concrete, comparable demonstrations"
+      ],
+      "skills": {
+        "Git": 4,
+        "Node.js": 4,
+        "Express.js": 2,
+        "React.js": 4,
+        "Netlify": 3,
+        "JavaScript/TypeScript": 5,
+        "Vercel": 3
+      }
+    },
+    {
+      "role": "Frontend",
+      "period": "Jan 2024 - Mar 2024",
+      "client": "Squeed, AI-Chatbot",
+      "description": "I launched and developed an AI chatbot for onboarding new employees, working with cutting-edge frameworks and sharpening proficiency across both modern and traditional technologies. I deployed and hosted the demo application, the Java API, and LocalAI on AWS.",
+      "narrative": "I worked on an internal AI chatbot project aimed at onboarding new employees, built with Lit (web components) and backed by a Java API running LocalAI. My primary contribution was on the frontend and infrastructure side — Java isn't a language I have strong proficiency in, so I focused on deploying and hosting the demo app, Java API, and LocalAI on AWS, which gave me solid hands-on experience with AWS services. Sadly, the project never got permission to index the company intranet as searchable content, so the chatbot never reached actual use. It remained a valuable learning project, especially for understanding self-hosted LLM inference and AWS deployment.",
+      "achievements": [
+        "Deployed and hosted a full AI stack on AWS: frontend demo app, Java API, and LocalAI inference server",
+        "Gained hands-on understanding of self-hosted LLM inference and AWS infrastructure through a greenfield project"
+      ],
+      "skills": {
+        "HTML": 5,
+        "CSS": 4,
+        "Amazon Web Services": 2,
+        "Lit": 1
+      }
+    },
+    {
+      "role": "Frontend",
+      "period": "Jan 2023 - Nov 2023",
+      "client": "Yara Marine, Fleet Analytics",
+      "description": "I developed fleet analytics features, integrated new capabilities, and maintained the system. I drove improvements to design consistency across the application, and used GitHub to organize tasks, track bugs, manage code, and review pull requests.",
+      "narrative": "I joined a cross-functional team building fleet analytics for commercial vessels. A central feature was a split-panel view: a data table on the left and a live map on the right, sharing the same React context. Hovering a row would highlight the corresponding point on the map and vice versa. Because both panels subscribed to the same state, every hover event triggered a full re-render of the entire component tree — causing noticeable lag. I diagnosed the bottleneck, redesigned the state subscriptions so that only the specific row and map point being hovered would re-render, eliminating the lag entirely. Beyond performance, I drove design consistency improvements across the application and introduced structured code reviews via GitHub.",
+      "quantifiedResults": "Eliminated hover-lag on the shared map/table context by reducing re-renders from full component-tree redraws to targeted single-element updates.",
+      "achievements": [
+        "Diagnosed and resolved a full-tree React re-render bottleneck caused by shared hover state between a map and a data table",
+        "Reduced re-renders to only the specific hovered row and map point, fully removing perceived lag",
+        "Drove UI design consistency improvements across the fleet analytics application",
+        "Introduced structured GitHub-based code review and bug tracking workflows to the team"
+      ],
+      "skills": {
+        "HTML": 5,
+        "CSS": 4,
+        "Git": 4,
+        "Amazon Web Services": 2,
+        "Node.js": 4,
+        "GitHub": 4,
+        "Jest": 3,
+        "React.js": 4,
+        "Storybook": 3,
+        "ReduxJS": 2,
+        "JavaScript/TypeScript": 5,
+        "MUI": 3
+      }
+    },
+    {
+      "role": "Frontend",
+      "period": "Jan 2022 - Dec 2022",
+      "client": "Volvo Group Connected Solutions, Customer Connect at Queenslab",
+      "description": "I joined the Developer Portal team at VGCS, implementing new features for the Administration tool and maintaining existing functionality. I collaborated closely with backend teams, UX designers, and testers throughout the project.",
+      "narrative": "I worked on the Developer Portal team at Volvo Group Connected Solutions in a siloed structure where direct access to the backend team was limited. My closest collaboration was with our tester and a newly graduated colleague. I naturally took on a teaching and mentoring role — helping the junior developer grow while keeping delivery moving. A significant part of the work went beyond code: I contributed to improving our way-of-working processes to make releases smoother and more predictable. The team also undertook a full design system migration during this period, which had to be bundled with ongoing feature development due to limited dedicated migration time.",
+      "quantifiedResults": "Delivered approximately 60–70% of a full design system migration within a 5-person team (2 FE, 1 tester, 1 UX, 1 PO), completed incrementally alongside new feature development with no dedicated migration sprint.",
+      "achievements": [
+        "Drove 60–70% of a design system migration bundled alongside active feature development",
+        "Mentored a newly graduated colleague, balancing knowledge transfer with delivery pace",
+        "Collaborated closely with the tester to build a reliable feedback loop within the team",
+        "Contributed to way-of-working process improvements that made releases smoother and more predictable"
+      ],
+      "skills": {
+        "HTML": 5,
+        "Git": 4,
+        "React.js": 4,
+        "Storybook": 3,
+        "JavaScript/TypeScript": 5,
+        "MUI": 3,
+        "Frontend Development": 5
+      }
+    },
+    {
+      "role": "Frontend",
+      "period": "Jul 2021 - Sept 2021",
+      "client": "Osstell at Queenslab",
+      "description": "I built a native app that communicates via Bluetooth and supports camera-based barcode scanning. I also contributed to further developing Osstell's existing web application.",
+      "narrative": "I worked on OsstellConnect, a cloud-based dental implant treatment planning platform for clinicians. The product includes a ConsultationTool that guides clinicians through proposed procedure steps — from surgery to final restoration — with science-based explanations and time estimations between stages. My role was frontend development on the React Native mobile application. I built the Bluetooth implementation connecting the app to the Osstell Beacon device, implemented a canvas layer for graphical representation of mouth anatomy, built an editing system with full history and undo support, and wrote unit tests. I also contributed to advancing Osstell's web application in parallel.",
+      "achievements": [
+        "Built Bluetooth communication between the React Native app and the Osstell Beacon medical device",
+        "Implemented a canvas layer for anatomical mouth representation within the dental planning UI",
+        "Built an editing system with full history tracking and undo functionality",
+        "Wrote unit tests covering the mobile application"
+      ],
+      "skills": {
+        "HTML": 5,
+        "CSS": 4,
+        "React Native": 2,
+        "React.js": 4,
+        "ReduxJS": 2,
+        "JavaScript/TypeScript": 5
+      }
+    },
+    {
+      "role": "Fullstack",
+      "period": "Mar 2021 - Mar 2021",
+      "client": "Emerson at Queenslab",
+      "description": "I worked within a large IoT-focused organization of over 20 developers and testers, spanning responsibilities across the full stack with a primary focus on frontend development and testing environments.",
+      "narrative": "A large IoT-focused organisation with a 20+ person development and testing team, working across a full stack of Vue, C#/.NET, Azure, and Docker. I identified opportunities for improvement but found the team resistant to change. Rather than stay in an environment where I couldn't contribute at the level I wanted, I asked my manager to move me to a different assignment. It reinforced what I value in a client: a team that is open to iterating on how they work, not just what they build.",
+      "skills": {
+        "HTML": 5,
+        "CSS": 4,
+        "C#": 3,
+        "Microsoft Azure": 2,
+        "Docker": 3,
+        ".NET Core": 3,
+        "Vue.js": 3,
+        "JavaScript/TypeScript": 5
+      }
+    },
+    {
+      "role": "Fullstack",
+      "period": "Jan 2020 - Mar 2021",
+      "client": "Ericsson at Queenslab",
+      "description": "I worked in a small team responsible for maintaining and implementing new features in a confidential product. I led development of a new client built with React and Ericsson's design system, collaborating closely with the backend team throughout.",
+      "narrative": "I worked in a small team on a confidential product with two parallel tracks. On the .NET side, I co-programmed directly with the backend team, bridging the gap between server logic and the client layer. In parallel, I led the implementation of a new React client built on Ericsson's design system — a system with strict, well-documented design rules that required close collaboration and ongoing discussions with Ericsson's own design organisation to implement correctly. I also maintained and extended the old client, which was built in jQuery. Working at that level of raw DOM manipulation deepened my understanding of how browsers actually work — knowledge that now underpins my framework-agnostic approach.",
+      "achievements": [
+        "Co-programmed .NET backend features alongside the backend team, reducing integration friction",
+        "Led implementation of Ericsson's strict design system in the new React client through close collaboration with their design organisation",
+        "Maintained and extended a legacy jQuery client, sharpening core DOM manipulation skills"
+      ],
+      "skills": {
+        "HTML": 5,
+        "CSS": 4,
+        "jQuery": 3,
+        "C#": 3,
+        "Microsoft Azure": 2,
+        ".NET Core": 3,
+        "JavaScript/TypeScript": 5
+      }
+    },
+    {
+      "role": "Frontend",
+      "period": "Jan 2019 - Dec 2019",
+      "client": "Grafokett at Queenslab",
+      "description": "I led frontend development for a new enterprise service, Grafokett Online, enabling global label printing. I built components in isolation using Vue.js and Storybook, and tested them with Mocha and Chai to ensure reusability across the platform.",
+      "narrative": "I led frontend development for Grafokett Online, a new enterprise service for global label printing. I built the entire component library from scratch in isolation using Vue.js and Storybook, tested with Mocha and Chai. I delivered the MVP and handed it over to colleagues who took on maintenance — the product was still in test phase when I moved on, so I never saw the full-scale rollout, but I laid the foundation it was built on.",
+      "achievements": [
+        "Built the MVP component library from scratch using Vue.js and Storybook with full Mocha/Chai test coverage",
+        "Established an isolated component development workflow that colleagues could continue building on after handover"
+      ],
+      "skills": {
+        "HTML": 5,
+        "CSS": 4,
+        "Microsoft Azure": 2,
+        "Jest": 3,
+        "Storybook": 3,
+        "Vue.js": 3,
+        "JavaScript/TypeScript": 5
+      }
+    },
+    {
+      "role": "Frontend",
+      "period": "Jan 2019 - Dec 2019",
+      "client": "Blue Mobile Systems at Queenslab",
+      "description": "I led frontend development for a project providing security officers with access to documentation and alarms. I built complex, performance-intensive graphs and packaged components as a standalone library for reuse across other products.",
+      "narrative": "I led frontend development for a security operations platform, building complex data visualisations with D3.js including heatmaps and alarm graphs. The search was powered by Elasticsearch, making filter updates nearly instant. Rather than adding loading states — which only caused flickering on fast responses — I made the deliberate UX decision to remove them entirely, giving users a seamless, flicker-free experience. I packaged the visualisation components as a standalone library for reuse across other products in the portfolio.",
+      "achievements": [
+        "Built complex D3.js data visualisations including heatmaps for security operations data",
+        "Made a deliberate UX decision to remove loading states on Elasticsearch-backed search, eliminating flickering on near-instant responses",
+        "Packaged frontend components as a standalone reusable library for use across multiple products"
+      ],
+      "skills": {
+        "HTML": 5,
+        "CSS": 4,
+        "Microsoft Azure": 2,
+        "Jest": 3,
+        "d3.js": 2,
+        "Storybook": 3,
+        "Vue.js": 3,
+        "JavaScript/TypeScript": 5
+      }
+    },
+    {
+      "role": "Backend",
+      "period": "Sept 2015 - Sept 2018",
+      "client": "Aareon Nordic",
+      "description": "I served as a core development team member responsible for essential application functionalities. I collaborated across teams, support, and testing functions to ensure issues were identified and resolved promptly.",
+      "narrative": "My first professional role, working as a core team member on Aareon's property management software built in .NET using C#, XAML, and the MVVM pattern. A memorable challenge was visualising overlapping time ranges of blocked and unblocked periods. The team discussed creating a separate block element for each time range, but I found that approach too clunky. Instead, I designed an algorithm that merged and cleaned the timestamps into a unified sequence of state transitions — from blocked to unblocked — and rendered them as a smooth gradient, resulting in much cleaner visual cuts between states. This early experience with typed, structured backend development gives me a genuine understanding of both sides of the stack that most frontend specialists lack.",
+      "achievements": [
+        "Designed a timestamp-merging algorithm to render overlapping blocked/unblocked time ranges as a clean gradient, replacing a clunky per-block approach",
+        "Contributed to core application features across a 3-year tenure in a structured .NET/MVVM codebase",
+        "Collaborated with support and testing teams to resolve production issues promptly"
+      ],
+      "skills": {
+        "C#": 3,
+        "XAML": 3,
+        "MVVM": 3,
+        ".NET": 3
+      }
+    }
+  ],
+  "skills": {
+    "total": 54,
+    "items": [
+      {
+        "name": "Frontend Development",
+        "level": 5,
+        "years": null,
+        "category": "Role"
+      },
+      {
+        "name": "HTML",
+        "level": 5,
+        "years": 6.1,
+        "category": "Technique"
+      },
+      {
+        "name": "JavaScript/TypeScript",
+        "level": 5,
+        "years": 5.9,
+        "category": "Technique"
+      },
+      {
+        "name": "Bun",
+        "level": 4,
+        "years": null,
+        "category": "Tool"
+      },
+      {
+        "name": "CSS",
+        "level": 4,
+        "years": 5.1,
+        "category": "Technique"
+      },
+      {
+        "name": "Drizzle ORM",
+        "level": 4,
+        "years": null,
+        "category": "Library"
+      },
+      {
+        "name": "Git",
+        "level": 4,
+        "years": 27,
+        "category": "Tool",
+        "years_unit": "months"
+      },
+      {
+        "name": "GitHub",
+        "level": 4,
+        "years": 10,
+        "category": "Platform",
+        "years_unit": "months"
+      },
+      {
+        "name": "GitHub Actions",
+        "level": 4,
+        "years": 9,
+        "category": "Platform",
+        "years_unit": "months"
+      },
+      {
+        "name": "honojs",
+        "level": 4,
+        "years": null,
+        "category": "Framework"
+      },
+      {
+        "name": "React.js",
+        "level": 4,
+        "years": null,
+        "category": "Framework"
+      },
+      {
+        "name": "Node.js",
+        "level": 4,
+        "years": null,
+        "category": "Runtime"
+      },
+      {
+        "name": "TanStack Query",
+        "level": 4,
+        "years": null,
+        "category": "Library"
+      },
+      {
+        "name": "tanstack-router",
+        "level": 4,
+        "years": null,
+        "category": "Library"
+      },
+      {
+        "name": "Vue.js",
+        "level": 3,
+        "years": null,
+        "category": "Framework"
+      },
+      {
+        "name": "Storybook",
+        "level": 3,
+        "years": null,
+        "category": "Tool"
+      },
+      {
+        "name": "Jest",
+        "level": 3,
+        "years": null,
+        "category": "Tool"
+      },
+      {
+        "name": "MUI",
+        "level": 3,
+        "years": null,
+        "category": "Library"
+      },
+      {
+        "name": "jQuery",
+        "level": 3,
+        "years": null,
+        "category": "Library"
+      },
+      {
+        "name": "C#",
+        "level": 3,
+        "years": null,
+        "category": "Language"
+      },
+      {
+        "name": ".NET",
+        "level": 3,
+        "years": null,
+        "category": "Framework"
+      },
+      {
+        "name": ".NET Core",
+        "level": 3,
+        "years": null,
+        "category": "Framework"
+      },
+      {
+        "name": "XAML",
+        "level": 3,
+        "years": null,
+        "category": "Technique"
+      },
+      {
+        "name": "MVVM",
+        "level": 3,
+        "years": null,
+        "category": "Technique"
+      },
+      {
+        "name": "Docker",
+        "level": 3,
+        "years": null,
+        "category": "Tool"
+      },
+      {
+        "name": "Netlify",
+        "level": 3,
+        "years": null,
+        "category": "Platform"
+      },
+      {
+        "name": "Vercel",
+        "level": 3,
+        "years": null,
+        "category": "Platform"
+      },
+      {
+        "name": "SQLite",
+        "level": 3,
+        "years": null,
+        "category": "Database"
+      },
+      {
+        "name": "PostgreSQL",
+        "level": 3,
+        "years": null,
+        "category": "Database"
+      },
+      {
+        "name": "Pi harness SDK",
+        "level": 3,
+        "years": null,
+        "category": "Tool"
+      },
+      {
+        "name": "React Native",
+        "level": 2,
+        "years": null,
+        "category": "Framework"
+      },
+      {
+        "name": "ReduxJS",
+        "level": 2,
+        "years": null,
+        "category": "Library"
+      },
+      {
+        "name": "Express.js",
+        "level": 2,
+        "years": null,
+        "category": "Framework"
+      },
+      {
+        "name": "Microsoft Azure",
+        "level": 2,
+        "years": null,
+        "category": "Platform"
+      },
+      {
+        "name": "Amazon Web Services",
+        "level": 2,
+        "years": null,
+        "category": "Platform"
+      },
+      {
+        "name": "JIRA",
+        "level": 2,
+        "years": null,
+        "category": "Tool"
+      },
+      {
+        "name": "d3.js",
+        "level": 2,
+        "years": null,
+        "category": "Library"
+      },
+      {
+        "name": "MongoDB",
+        "level": 2,
+        "years": null,
+        "category": "Database"
+      },
+      {
+        "name": "CouchDB",
+        "level": 2,
+        "years": null,
+        "category": "Database"
+      },
+      {
+        "name": "Firestore",
+        "level": 2,
+        "years": null,
+        "category": "Database"
+      },
+      {
+        "name": "Rust",
+        "level": 2,
+        "years": null,
+        "category": "Language"
+      },
+      {
+        "name": "Caddy",
+        "level": 2,
+        "years": null,
+        "category": "Tool"
+      },
+      {
+        "name": "Wrangler",
+        "level": 2,
+        "years": null,
+        "category": "Tool"
+      },
+      {
+        "name": "Ollama",
+        "level": 2,
+        "years": null,
+        "category": "Tool"
+      },
+      {
+        "name": "dnsmasq",
+        "level": 2,
+        "years": null,
+        "category": "Tool"
+      },
+      {
+        "name": "Cloudflare R2",
+        "level": 2,
+        "years": null,
+        "category": "Platform"
+      },
+      {
+        "name": "Cloudflare Tunnel",
+        "level": 2,
+        "years": null,
+        "category": "Platform"
+      },
+      {
+        "name": "ESP32",
+        "level": 2,
+        "years": null,
+        "category": "Hardware"
+      },
+      {
+        "name": "Unity",
+        "level": 2,
+        "years": null,
+        "category": "Tool"
+      },
+      {
+        "name": "Godot",
+        "level": 2,
+        "years": null,
+        "category": "Tool"
+      },
+      {
+        "name": "Blender",
+        "level": 2,
+        "years": null,
+        "category": "Tool"
+      },
+      {
+        "name": "Lit",
+        "level": 1,
+        "years": null,
+        "category": "Framework"
+      },
+      {
+        "name": "Zero (Rocorp)",
+        "level": 2,
+        "years": null,
+        "category": "Library"
+      },
+      {
+        "name": "Jazz.tools",
+        "level": 2,
+        "years": null,
+        "category": "Library"
+      }
+    ]
+  },
+  "other_skills": [
+    "B driver's license",
+    "Local-first software advocate (Zero by Rocorp, Jazz.tools)",
+    "Agile / Scrum methodology",
+    "Component-driven development (Storybook)",
+    "UI/UX collaboration and design system implementation",
+    "Technical mentoring and onboarding",
+    "Home lab server administration (Docker Compose, Caddy, dnsmasq)"
+  ],
+  "references": [
+    {
+      "name": "Chris Papastefanou",
+      "role": "UX Designer",
+      "assignment": "Frontend",
+      "client": "Volvo Group Connected Solutions, Customer Connect at Queenslab",
+      "reference_text": "Eskil is a progressive, and imaginative developer that's easy to work with. He produces smart and sustainable solutions that garners praise around the organization. A pleasure to have in my team!"
+    }
+  ],
+  "certifications_and_courses": [
+    {
+      "name": "Complete Blender Creator: Learn 3D Modeling for Beginners",
+      "year": 2022,
+      "type": "Course",
+      "issuer": "Udemy"
+    }
+  ],
+  "employers": [
+    {
+      "name": "Squeed",
+      "period": "Nov 2023 - Ongoing"
+    },
+    {
+      "name": "Yara Marine",
+      "period": "Jan 2023 - Nov 2023"
+    },
+    {
+      "name": "QueensLab",
+      "period": "Sept 2018 - Dec 2022"
+    },
+    {
+      "name": "Aareon Nordic",
+      "period": "Sept 2015 - Sept 2018"
+    }
+  ],
+  "education": [
+    {
+      "program": "Technology",
+      "school": "NTI Gymnasiet",
+      "period": "2012 - 2015",
+      "address": "Kronhusgatan 9, 411 05 Göteborg",
+      "level": "Upper Secondary School"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Swedish",
+      "level": "Native or bilingual proficiency"
+    },
+    {
+      "name": "English",
+      "level": "Professional working proficiency"
+    }
+  ],
+  "vision": {
+    "consultingPhilosophy": "I view the web as a platform with infinite potential, provided it's built on the right foundations. As a Senior Software Engineer focusing on Frontend Architecture, my philosophy is simple: technologies come and go, but Web Standards endure. Throughout my years as a Fullstack Developer, I've seen the immense value of being Framework Agnostic. By understanding the platform at its core-from DOM manipulation and CSS architecture to how browsers actually render code-I move seamlessly between ecosystems. Whether it's React, Vue, or the next emerging library, my focus remains on building solutions that are sustainable, accessible, and high-performing. My technical weight lies in TypeScript, and I advocate for a modern, lightweight approach to backend development. I frequently leverage tools like Hono and Edge Runtimes to create fast, scalable APIs that complement a sharp frontend experience. To me, software engineering isn't just about writing code that works today; it's about designing systems that are maintainable tomorrow. I thrive on bridging the gap between complex business logic and a seamless user experience.",
+    "idealClient": "I deliver the most value to product-focused scale-ups and mid-size tech companies that have backend teams in place but need a strong, independent frontend architect who can own the entire client layer. I'm drawn to products with real complexity — rich data, multi-step workflows, performance requirements, or type-safe fullstack stacks. A TypeScript-first codebase on both sides is a strong signal of a good fit. Beyond the technology, I care about what I'm building — I'm most motivated by products that have a positive impact on society or the environment. I don't take assignments in the gambling industry or involving offensive weapons.",
+    "shortTermGoals": [
+      "Register my own consulting company and land my first freelance client",
+      "Build a public portfolio that communicates my Frontend Architecture positioning clearly",
+      "Grow mock-dash into a well-documented, community-adopted open-source tool",
+      "Establish a direct client network so I'm never dependent on a single engagement",
+      "Take on a project with a clear societal or environmental impact"
+    ]
+  },
+  "personality": {
+    "traits": [
+      "Pragmatic",
+      "Curious",
+      "Fast learner",
+      "Collaborative",
+      "Detail-oriented in UI/UX",
+      "Playfully creative",
+      "Broad technical curiosity — hardware, AI/LLM, 3D rendering, DevOps — with frontend as my sharpest specialisation"
+    ],
+    "workStyle": "I work best in small, autonomous teams where I take full ownership of the frontend end-to-end. I'm equally effective in larger cross-functional orgs when I have clear API contracts to work against. I prefer building on a solid foundation from day one — I align with backend early to agree on a shared API contract, then build each feature with the final implementation in mind. I use a mock server to keep the correct asynchronous flow intact throughout development, so integration is never a last-minute surprise. I prefer clear goals with room to make architectural decisions independently, and I'm comfortable being the sole frontend voice in the room. As a freelancer, I communicate directly with clients, translate business needs into technical solutions, and hold myself accountable for delivery.",
+    "conflictResolution": "When I disagree on an API shape, I approach it contextually. If my frontend is the only consumer of that API, I advocate directly for aligning the response shape to the client's needs — the API should serve the consumer, not the other way around. If the API is shared across multiple consumers, I add a shape mapper at the call site to transform the response into exactly what the frontend needs, keeping the domain logic clean. If the problem runs deeper — missing data, incorrect data, or the need to aggregate multiple calls into one action — I argue for a Backend for Frontend (BFF) layer that handles aggregation server-side, so the client sends a single request and gets back everything it needs. I lead with reasoning and working examples rather than pure opinion, and I focus the conversation on what's most maintainable and sustainable long-term.",
+    "behavioralStories": [
+      {
+        "situation": "At Telia I was brought in to rebuild a critical internal tool from the ground up, with no existing frontend codebase to build on.",
+        "action": "I initiated early alignment sessions with the backend team to agree on an API contract before writing a single component. I set up a mock server so the async flow was correct from day one, then built each feature against the final contract.",
+        "result": "Integration was seamless at delivery — no last-minute surprises or API rework required.",
+        "trait": "Foundation-first architecture, cross-team alignment"
+      },
+      {
+        "situation": "I kept running into the same friction on frontend projects: the mock server and the real API client would drift apart causing subtle bugs and wasted integration time. On top of that, most projects lacked good reusable end-to-end tests because there was no reliable way to control state repeatably.",
+        "action": "I designed and built mock-dash — a TypeScript library that lets you define your API schema once and automatically derive both a type-safe client and a Hono-based mock server from it. I also built in support for a local SQLite or in-memory database, giving E2E tests a consistent, repeatable state to run against. I published it on npm and maintain it as an ongoing open-source project.",
+        "result": "I eliminated an entire class of frontend/backend drift bugs on my own projects, and opened up the possibility of reliable, reusable E2E tests in environments that previously had none. The library is publicly available on npm for the wider community.",
+        "trait": "Problem-driven engineering, initiative, open-source ownership, test infrastructure thinking"
+      },
+      {
+        "situation": "Across 11 years of consulting I've been dropped into codebases using React, Vue, React Native, Lit, and .NET — often with no ramp-up time.",
+        "action": "I invested early in understanding the web platform itself — DOM, CSS architecture, browser rendering, and TypeScript fundamentals — so that any framework becomes a thin layer I can learn quickly rather than the foundation I depend on.",
+        "result": "I've delivered production-quality work across at least five different framework ecosystems without ever needing a significant ramp-up period on the framework itself.",
+        "trait": "Framework agnosticism, platform-depth thinking, adaptability"
+      },
+      {
+        "situation": "Throughout my career I've noticed that web developers often operate in a narrow silo, unaware of how the systems around them work — the backend, the infrastructure, the hardware, the rendering pipeline.",
+        "action": "Outside of client work I deliberately explored adjacent domains: I built hobby projects with ESP32 microcontrollers, ran a home server with Docker Compose, studied how LLMs work and built AI agent harnesses, used Unity, Godot and Blender to understand 3D rendering, shaders and materials, and collaborated closely with UI/UX designers on multiple projects. I approached each area with the goal of gaining solid theoretical understanding, not necessarily professional proficiency.",
+        "result": "I can hold meaningful technical conversations across hardware, infrastructure, AI workflows, and design — making me a more effective collaborator and a consultant who understands the full context of a product, not just the frontend slice.",
+        "trait": "Broad technical curiosity, cross-domain communication, T-shaped expertise"
+      },
+      {
+        "situation": "At Yara Marine, the fleet analytics app had a split-panel view — a data table on the left and a live map on the right — both sharing the same React context. Hovering a row highlighted a point on the map and vice versa, but every hover triggered a full re-render of the entire component tree, causing noticeable lag for users.",
+        "action": "I diagnosed the root cause: all components subscribed to the same shared state, so any hover change invalidated the whole tree. I redesigned the state subscriptions to scope updates to only the specific row and map point being hovered, leaving the rest of the tree untouched.",
+        "result": "The lag was fully eliminated. Users could hover freely across the map and table with instant, smooth feedback.",
+        "trait": "Performance optimisation, React internals knowledge, user-impact focus"
+      },
+      {
+        "situation": "At Aareon we needed to visualise overlapping time ranges of blocked and unblocked periods in the property management software. The team's proposed solution was to render a separate block element for each individual time range.",
+        "action": "I pushed back on the per-block approach as too clunky and designed an algorithm that merged and cleaned the raw timestamps into a unified sequence of state transitions. I then rendered the result as a smooth gradient, producing clean visual cuts between blocked and unblocked states with a single, elegant output.",
+        "result": "The final implementation was significantly cleaner visually and simpler to maintain than the original proposal.",
+        "trait": "Algorithmic thinking, questioning the obvious solution, clean design over quick fixes"
+      },
+      {
+        "situation": "For my final school project (gymnasiearbete) at NTI Gymnasiet I chose to study pathfinding algorithms.",
+        "action": "I built an interactive playground that visualised how the A* algorithm calculates the fastest path, letting users manipulate the grid and watch the algorithm work in real time.",
+        "result": "The project gave me a deep, hands-on understanding of graph traversal and algorithmic complexity that still informs how I think about performance and data flow today.",
+        "trait": "Algorithmic thinking, visual communication of complex concepts, self-directed learning"
+      },
+      {
+        "situation": "In my first programming course at NTI Gymnasiet, the curriculum covered material I had already taught myself years earlier.",
+        "action": "Rather than coast through the course, I used the time to help my classmates work through their questions and acted as a supporting resource for my teacher.",
+        "result": "I developed a habit of explaining technical concepts clearly to others — a skill I've relied on ever since when mentoring junior developers and onboarding colleagues.",
+        "trait": "Natural mentoring, technical communication, initiative"
+      },
+      {
+        "situation": "Growing up, my dad was a developer and my brother and I played a lot of video games. At some point I asked my dad how games were actually made.",
+        "action": "He bought us a beginner's course and a Game Maker license. The hook sank in immediately. I started building my own games — and soon recruited a friend from school to join me, giving him a creatively-sourced copy of Photoshop to handle the art while I handled the code.",
+        "result": "That early project lit a fire that never went out. It instilled a builder mentality and a natural inclination to find collaborators with complementary skills — patterns I still follow today.",
+        "trait": "Intrinsic motivation, self-directed learning, builder mentality, early collaboration instinct"
+      }
+    ]
+  },
+  "commitments_and_publications": [
+    {
+      "name": "Mock-dash",
+      "period": "2025 - Ongoing",
+      "description": "I built a TypeScript library that lets you define your API schema once and automatically derive both a type-safe API client and a Hono-based mock server. I also added support for a local SQLite or in-memory database, enabling repeatable state for E2E tests — solving both frontend/backend drift and the lack of reusable test infrastructure in most projects.",
+      "link": "https://www.npmjs.com/package/mock-dash"
+    }
+  ]
+}
